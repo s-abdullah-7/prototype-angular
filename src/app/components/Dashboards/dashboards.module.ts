@@ -16,6 +16,9 @@ import { PipelineDataComponent } from './pipeline-data/pipeline-data.component';
 import { StatisticsComponent } from './Program-Status/statistics/statistics.component';
 import { DashboardsRoutingModule } from './dashboards-routing.module';
 import { HomePageComponent } from './home-page/home-page.component';
+import { AdminDashboardComponent } from './admin-dashbaord/admin-dashbaord.component';
+import { UserComponent } from './user/user.component';
+import { UserEditComponent } from './user-edit/user-edit.component';
 
 
 
@@ -24,7 +27,10 @@ import { HomePageComponent } from './home-page/home-page.component';
   declarations: [
     StatisticsComponent,
     PipelineDataComponent,
-    HomePageComponent
+    HomePageComponent,
+    AdminDashboardComponent,
+    UserComponent,
+    UserEditComponent
 
     ],
     imports: [

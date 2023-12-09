@@ -3,7 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { StatisticsComponent } from './Program-Status/statistics/statistics.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { PipelineDataComponent } from './pipeline-data/pipeline-data.component';
-import { Title } from '@angular/platform-browser';
+import { AdminDashboardComponent } from './admin-dashbaord/admin-dashbaord.component';
+import { UserEditComponent } from './user-edit/user-edit.component';
 
 const routes: Routes = [
   {
@@ -14,6 +15,8 @@ const routes: Routes = [
       {path:"home/home",title:"Home",component:HomePageComponent},
       {path:"home/statistics",title:"Program Status",component: StatisticsComponent},
       {path:"dashboard/pipeline",title:"Trends",component: PipelineDataComponent},
+      {path:"dashboard/admin",title:"Trends",component: AdminDashboardComponent},
+      { path: 'user/edit/:id',title:"Edit User", component: UserEditComponent },
 
     ]
   }

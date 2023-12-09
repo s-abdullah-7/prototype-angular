@@ -9,6 +9,9 @@ import * as switcher from './switcher';
   templateUrl: './switcher.component.html',
   styleUrls: ['./switcher.component.scss'],
 })
+
+
+
 export class SwitcherComponent implements OnInit {
   layoutSub: Subscription;
 
@@ -24,6 +27,7 @@ export class SwitcherComponent implements OnInit {
 			},
 		);
 	}
+
 
   private getDismissReason(reason: any): string {
 		if (reason === ModalDismissReasons.ESC) {
@@ -52,10 +56,19 @@ export class SwitcherComponent implements OnInit {
         value = false;
       }
     });
+
+
     document.querySelector(".slide-leftRTL")?.classList.add("d-none")
     document.querySelector(".slide-rightRTL")?.classList.add("d-none")
   }
   ngOnInit(): void {
+
+    document.body.classList.add('color-menu');
+    document.body.classList.add('Slicahorizontal');
+    document.body.classList.remove('dark-header', 'light-header');
+
+
+
     switcher.localStorageBackUp();
     switcher.customClickFn();
     switcher.updateChanges();

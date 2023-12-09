@@ -117,7 +117,7 @@ export class NavService implements OnDestroy {
 
 		},
     {
-			title: 'Pipeline Data', icon: 'grid', type: 'sub', Menusub: true, active: false, children: [
+			title: 'Pipeline Data', icon: 'shopping-bag', type: 'sub', Menusub: true, active: false, children: [
         { path: '#', title: 'Operator Search', type: 'link' },
         { path: '#', title: 'IU Search', type: 'link' },
         { path: '#', title: 'Edit Date', type: 'link' },
@@ -173,14 +173,16 @@ export class NavService implements OnDestroy {
 
     {
 			title: 'Calfire Portal', icon: 'grid', type: 'sub', Menusub: true, active: false, children: [
-        // { path: '#', title: 'Statistics', type: 'link' },
+        { path: '#', title: 'Annual Reporting', type: 'link' },
+        { path: '#', title: 'Integrity Testing', type: 'link' },
+        { path: '#', title: 'Hydrostatic Testing', type: 'link' },
 				]
 
 		},
     {
 			title: 'Admin', icon: 'grid', type: 'sub', Menusub: true, active: false, children: [
         { path: '#', title: 'Billing', type: 'link' },
-        { path: '#', title: 'Change Managment', type: 'link' },
+        { path: '#', title: 'Change Management', type: 'link' },
         { path: '#', title: 'User Roles', type: 'link' },
 				]
 
