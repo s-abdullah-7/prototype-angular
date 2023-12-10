@@ -1,0 +1,72 @@
+<app-page-header title="Home"  active_item="State Waiver"></app-page-header>
+
+<div class="row mt-5">
+  <div class="col-md-8">
+    <div class="card">
+      <div class="card-header">
+        <div class="table-responsive table-lg">
+          <div class="m-3">
+            <h4>State Waiver Table</h4>
+          </div>
+
+          <table class="table table-bordered mb-0">
+            <thead class="thead-light">
+              <tr>
+                <th>Operator Name</th>
+                <th>Line ID</th>
+                <th>Description</th>
+                <th>Lead PSE</th>
+                <th>Status</th>
+                <th>Application Date</th>
+                <th>Expiration Date</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let waiver of stateWaivers">
+                <td>{{ waiver.operatorName }}</td>
+                <td>{{ waiver.lineID }}</td>
+                <td>{{ waiver.description }}</td>
+                <td>{{ waiver.leadPSE }}</td>
+                <td>{{ waiver.status }}</td>
+                <td>{{ waiver.applicationDate }}</td>
+                <td>{{ waiver.expirationDate }}</td>
+                <td>
+                  <button class="btn btn-sm btn-primary-light" type="button">Edit</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+    </div>
+
+  </div><!--Col End-->
+
+
+
+
+  <div class="col-md-4 col-sm-12">
+    <div class="card">
+      <div class="card-header">
+        <h3 class="card-title">State Waiver Status</h3>
+      </div>
+      <div class="card-body">
+        <p><ngb-progressbar type=" bg-green " [value]="60" [striped]="true">Approved</ngb-progressbar></p>
+        <p><ngb-progressbar type=" bg-yellow " [value]="40" [striped]="true">In Review</ngb-progressbar></p>
+        <p><ngb-progressbar type=" bg-red " [value]="10" [striped]="true">Expired</ngb-progressbar></p>
+        <p><ngb-progressbar type=" bg-blue " [value]="20" [striped]="true">Active</ngb-progressbar></p>
+
+      </div>
+    </div>
+  </div><!-- COL-END -->
+
+
+
+
+</div>
+
+
+
+

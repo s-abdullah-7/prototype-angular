@@ -5,6 +5,9 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { PipelineDataComponent } from './pipeline-data/pipeline-data.component';
 import { AdminDashboardComponent } from './admin-dashbaord/admin-dashbaord.component';
 import { UserEditComponent } from './user-edit/user-edit.component';
+import { UserAddComponent } from './user-add/user-add.component';
+import { HydrostaticFirmsComponent } from './hydrostatic-firms/hydrostatic-firms.component';
+import { StateWaiverComponent } from './state-waiver/state-waiver.component';
 
 const routes: Routes = [
   {
@@ -15,8 +18,11 @@ const routes: Routes = [
       {path:"home/home",title:"Home",component:HomePageComponent},
       {path:"home/statistics",title:"Program Status",component: StatisticsComponent},
       {path:"dashboard/pipeline",title:"Trends",component: PipelineDataComponent},
+      {path:"dashboard/hydrostatic",title:"Trends",component: HydrostaticFirmsComponent},
       {path:"dashboard/admin",title:"Trends",component: AdminDashboardComponent},
       { path: 'user/edit/:id',title:"Edit User", component: UserEditComponent },
+      { path: 'user/add',title:"Add User", component: UserAddComponent },
+      { path: 'dashboard/state-waiver',title:"Add User", component: StateWaiverComponent },
 
     ]
   }

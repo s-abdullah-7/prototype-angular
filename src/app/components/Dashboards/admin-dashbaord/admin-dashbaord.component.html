@@ -1,27 +1,89 @@
-<app-page-header title="Admin"  active_item=""></app-page-header>
-
+<app-page-header title="Admin" active_item="User Management"></app-page-header>
 
 <!-- ROW OPEN -->
 <div class="row">
     <div class="col-xl-12">
-        <div class="input-group mb-5">
-            <input type="text" class="form-control" placeholder="">
-            <button type="button" class="btn btn-primary">
-                <i class="fa fa-search" aria-hidden="true"></i>
+
+
+      <div class="card">
+
+
+        <div class="card-header">
+
+                  <div class="input-group " style="width: 300px;" >
+            <label for="abc">User: </label>
+            <input id="abc" class="form-control mx-4  " type="text" >
+
+          </div>
+
+          <div class="btn-group mt-2 mb-2" ngbDropdown>
+            <button type="button" class="btn btn-default dropdown-toggle me-1"  ngbDropdownToggle>
+                User Category<span class="mx-1"><i class="fa fa-caret-down" aria-hidden="true"></i></span>
             </button>
-        </div>
-        <div class="card">
-            <div class="card-header">
-                <div class="page-options d-flex float-end">
-                  <i class="fa fa-search" aria-hidden="true"></i>
-                </div>
+              <ul ngbDropdownMenu role="menu">
+                <li>
+                  <div class="custom-controls-stacked m-3">
+                    <label class="custom-control custom-radio">
+                      <input type="radio" class="custom-control-input"
+                         (change)="onCategoryChange('External')" name="userCategory" value="External" >
+                          <span class="custom-control-label">External</span>
+                    </label>
+                    <label class="custom-control custom-radio">
+                                        <input type="radio" class="custom-control-input"
+                                            (change)="onCategoryChange('Internal')" name="userCategory"
+                                            value="Internal" >
+                                        <span class="custom-control-label">Internal</span>
+                    </label>
+                    <label class="custom-control custom-radio">
+                                      <input type="radio" class="custom-control-input"
+                                          (change)="onCategoryChange('Internal')" name="userCategory"
+                                          value="Internal" >
+                                      <span class="custom-control-label">Admin</span>
+                    </label>
+                                </div>
+                </li>
+              </ul>
+
+          </div>
+
+          <div class="btn-group mt-2 mb-2" ngbDropdown>
+            <button type="button" class="btn btn-default dropdown-toggle me-1" ngbDropdownToggle>
+                User Roles <span ><i class="fa fa-caret-down" aria-hidden="true"></i></span>
+            </button>
+
+            <ul ngbDropdownMenu role="menu">
+                  <div class="custom-controls-stacked m-3">
+                      <label *ngFor="let role of userRoles" class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input" name="example-checkbox1" [value]="role" >
+                          <span class="custom-control-label">{{role}}</span>
+                       </label>
+                  </div>
+
+              </ul>
             </div>
-            <div class="card-body">
+
+            <div class="btn-group mt-2 mb-2 ms-auto">
+                <button type="button" class="btn btn-primary dropdown-toggle me-1" > <i class="fa fa-search" aria-hidden="true"></i> Search</button>
+
+            </div>
+
+
+
+
+
+        </div>
+
+        <div class="card-body">
+          <div class="mb-3 d-flex justify-content-end">
+            <button class="btn btn-success me-3" type="button" routerLink="/user/add">Add User</button>
+        </div>
+
                 <div class="table-responsive table-lg">
+
                     <table class="table table-bordered mb-0">
                         <thead>
                             <tr>
-                                <th  class="text-center">ID</th>
+                                <th class="text-center">ID</th>
                                 <th class="text-center">User Name</th>
                                 <th>User Category</th>
                                 <th>User Role</th>
@@ -34,15 +96,15 @@
                                 <td class="text-nowrap align-middle">{{i.name}}</td>
                                 <td class="text-nowrap align-middle"><span>{{i.userCategory}}</span></td>
                                 <td class="text-nowrap align-middle">
-                                  {{i.userRole}}
+                                    {{i.userRole}}
                                 </td>
                                 <td class="text-center align-middle">
                                     <div class="btn-group align-top">
-                                      <button class="btn btn-sm btn-primary-light" type="button" (click)="editUser(i.id)">Edit</button>
+                                        <button class="btn btn-sm btn-primary-light" type="button"
+                                            (click)="editUser(i.id)">Edit</button>
                                     </div>
                                 </td>
                             </tr>
-
                         </tbody>
                     </table>
                 </div>

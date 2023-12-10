@@ -142,7 +142,7 @@ export class NavService implements OnDestroy {
 		},
     {
 			title: 'State Waiver', icon: 'grid', type: 'sub', Menusub: true, active: false, children: [
-        // { path: '#', title: 'Statistics', type: 'link' },
+        { path: '/dashboard/state-waiver', title: 'Overview', type: 'link' },
 				]
 
 		},
@@ -181,9 +181,9 @@ export class NavService implements OnDestroy {
 		},
     {
 			title: 'Admin', icon: 'grid', type: 'sub', Menusub: true, active: false, children: [
+        { path: '/dashboard/admin', title: 'User Roles', type: 'link' },
+        { path: '/', title: 'Change Management', type: 'link' },
         { path: '#', title: 'Billing', type: 'link' },
-        { path: '#', title: 'Change Management', type: 'link' },
-        { path: '#', title: 'User Roles', type: 'link' },
 				]
 
 		},

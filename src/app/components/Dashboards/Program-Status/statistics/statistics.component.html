@@ -1,7 +1,11 @@
-<app-page-header title="Program Status" active_item=""></app-page-header>
+<app-page-header title="Home" active_item="Program Status" active_item2="Dashboard"></app-page-header>
+
+
 <div class="row row-sm">
   <div class="col-lg-6 col-md-12">
-      <div class="card mg-b-20">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="card mg-b-20">
           <div class="card-body">
               <div class="main-content-label mg-b-5" style="display: flex;justify-content: center;">
                   <h3>INFRASTRUCTURE</h3>
@@ -20,766 +24,433 @@
                 <li>Total High Risk Lines</li>
               </ul>
             </div>
-            <div echarts [options]="echartBasicLine"></div>
-            <div style="padding-bottom: 120px;"></div>
-            <div echarts [options]="echartSmoothLine"></div>
-            <div style="padding-bottom: 120px;"></div>
+            </div>
+
+
+
+
+
+
           </div>
       </div>
 
+                  <div class="col-lg-12">
+  <div class="card">
+    <div class="card-body">
+      <div echarts [options]="echartBasicLine"></div>
+    </div>
   </div>
-  <div class="col-lg-6 col-md-12">
-    <div class="card mg-b-20">
-        <div class="card-body">
-            <div class="main-content-label mg-b-5">
-                <h3>ACTIVITIES</h3>
-            </div>
+</div>
+
+<div class="col-lg-12">
+  <div class="card">
+    <div class="card-body">
+      <div echarts [options]="echartSmoothLine"></div>
+    </div>
+  </div>
+</div>
+
+
+
+      </div>
+    </div>
+
+
+
+      <div class="col-lg-6 col-md-12">
+        <div class="card mg-b-20">
             <div class="card-body">
-              <p>May 2022 Activity Days Report</p>
-                    <div class="table-responsive">
-                      <table class="table border card-table table-vcenter text-nowrap">
-                        <thead class="thead-light">
-                          <tr>
-                            <th>Inspector</th>
-                            <th>Total Days</th>
-                            <th>Months as Inspector in 2022</th>
-                            <th>Employee % Time</th>
-                            <th>Month x % Time</th>
-                            <th>Expected YTD days</th>
-                            <th>Total Days/Expected YTD Days</th>
-                            <th>Total Day/85</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <th scope="row">Aimee Cauguiran</th>
-                            <td>32.5</td>
-                            <td>5</td>
-                            <td >100%</td>
-                            <td >5.0</td>
-                            <td >35.42</td>
-                            <td >92%</td>
-                            <td >38%</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">Al Giese</th>
-                            <td>31</td>
-                            <td>5</td>
-                            <td >1  00%</td>
-                            <td >5.0</td>
-                            <td >35.42</td>
-                            <td >88%</td>
-                            <td >38%</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">Alula Gebrmendhin</th>
-                            <td>18</td>
-                            <td>5</td>
-                            <td >100%</td>
-                            <td >5.0</td>
-                            <td >35.42</td>
-                            <td >51%</td>
-                            <td >21%</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">Bita Emani</th>
-                            <td>32.5</td>
-                            <td>5</td>
-                            <td >100%</td>
-                            <td >5.0</td>
-                            <td >35.42</td>
-                            <td >92%</td>
-                            <td >38%</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">Bob Gorham</th>
-                            <td>44.5</td>
-                            <td>5</td>
-                            <td >100%</td>
-                            <td >2.50</td>
-                            <td >17.71</td>
-                            <td >0%</td>
-                            <td >0%</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">Chuck MacDonald</th>
-                            <td>17.825</td>
-                            <td>5</td>
-                            <td >50%</td>
-                            <td >2.50</td>
-                            <td >17.71</td>
-                            <td >101%</td>
-                            <td >42%</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">Dan Lee</th>
-                            <td>44.5</td>
-                            <td>5</td>
-                            <td >100%</td>
-                            <td >5.0</td>
-                            <td >35.42</td>
-                            <td >126%</td>
-                            <td >52%</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">Durga Shreshta</th>
-                            <td>43.5</td>
-                            <td>5</td>
-                            <td >100%</td>
-                            <td >5.0</td>
-                            <td >35.42</td>
-                            <td >167%</td>
-                            <td >69%</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">Enrique Jimenez</th>
-                            <td>59</td>
-                            <td>5</td>
-                            <td >100%</td>
-                            <td >5.0</td>
-                            <td >35.42</td>
-                            <td >106%</td>
-                            <td >44%</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">Ha Nguyen</th>
-                            <td>37.5</td>
-                            <td>5</td>
-                            <td >50%</td>
-                            <td >2.50</td>
-                            <td >17.71</td>
-                            <td >181%</td>
-                            <td >75%</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">Hossein Monfared</th>
-                            <td>32</td>
-                            <td>5</td>
-                            <td >50%</td>
-                            <td >2.50</td>
-                            <td >17.71</td>
-                            <td >181%</td>
-                            <td >75%</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">Justin Harer</th>
-                            <td>35</td>
-                            <td>5</td>
-                            <td >100%</td>
-                            <td >5.0</td>
-                            <td >35.42</td>
-                            <td >99%</td>
-                            <td >41%</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">Malek Itani</th>
-                            <td>35</td>
-                            <td>5</td>
-                            <td >100%</td>
-                            <td >5.0</td>
-                            <td >35.42</td>
-                            <td >99%</td>
-                            <td >41%</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">Mark McCaleb</th>
-                            <td>32</td>
-                            <td>5</td>
-                            <td >100%</td>
-                            <td >5.0</td>
-                            <td >3542</td>
-                            <td >90%</td>
-                            <td >38%</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">Sampson Tang</th>
-                            <td>47.5</td>
-                            <td>5</td>
-                            <td >100%</td>
-                            <td >5.0</td>
-                            <td >35.42</td>
-                            <td >90%</td>
-                            <td >38%</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">Tuan Tran</th>
-                            <td>41.5</td>
-                            <td>5</td>
-                            <td >100%</td>
-                            <td >5.0</td>
-                            <td >35.42</td>
-                            <td >117%</td>
-                            <td >49%</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">Xuan Nguyen</th>
-                            <td>41</td>
-                            <td>5</td>
-                            <td >100%</td>
-                            <td >5.0</td>
-                            <td >35.42</td>
-                            <td >116%</td>
-                            <td >48%</td>
-                          </tr>
+                <div class="main-content-label mg-b-5">
+                    <h3>ACTIVITIES</h3>
+                </div>
+                <div class="card-body">
+                  <p>May 2022 Activity Days Report</p>
+                        <div class="table-responsive">
+                          <table class="table border card-table table-vcenter text-nowrap">
+                            <thead class="thead-light">
+                              <tr>
+                                <th>Inspector</th>
+                                <th>Total Days</th>
+                                <th>Months as Inspector in 2022</th>
+                                <th>Employee % Time</th>
+                                <th>Month x % Time</th>
+                                <th>Expected YTD days</th>
+                                <th>Total Days/Expected YTD Days</th>
+                                <th>Total Day/85</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">Aimee Cauguiran</th>
+                                <td>32.5</td>
+                                <td>5</td>
+                                <td >100%</td>
+                                <td >5.0</td>
+                                <td >35.42</td>
+                                <td >92%</td>
+                                <td >38%</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">Al Giese</th>
+                                <td>31</td>
+                                <td>5</td>
+                                <td >1  00%</td>
+                                <td >5.0</td>
+                                <td >35.42</td>
+                                <td >88%</td>
+                                <td >38%</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">Alula Gebrmendhin</th>
+                                <td>18</td>
+                                <td>5</td>
+                                <td >100%</td>
+                                <td >5.0</td>
+                                <td >35.42</td>
+                                <td >51%</td>
+                                <td >21%</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">Bita Emani</th>
+                                <td>32.5</td>
+                                <td>5</td>
+                                <td >100%</td>
+                                <td >5.0</td>
+                                <td >35.42</td>
+                                <td >92%</td>
+                                <td >38%</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">Bob Gorham</th>
+                                <td>44.5</td>
+                                <td>5</td>
+                                <td >100%</td>
+                                <td >2.50</td>
+                                <td >17.71</td>
+                                <td >0%</td>
+                                <td >0%</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">Chuck MacDonald</th>
+                                <td>17.825</td>
+                                <td>5</td>
+                                <td >50%</td>
+                                <td >2.50</td>
+                                <td >17.71</td>
+                                <td >101%</td>
+                                <td >42%</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">Dan Lee</th>
+                                <td>44.5</td>
+                                <td>5</td>
+                                <td >100%</td>
+                                <td >5.0</td>
+                                <td >35.42</td>
+                                <td >126%</td>
+                                <td >52%</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">Durga Shreshta</th>
+                                <td>43.5</td>
+                                <td>5</td>
+                                <td >100%</td>
+                                <td >5.0</td>
+                                <td >35.42</td>
+                                <td >167%</td>
+                                <td >69%</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">Enrique Jimenez</th>
+                                <td>59</td>
+                                <td>5</td>
+                                <td >100%</td>
+                                <td >5.0</td>
+                                <td >35.42</td>
+                                <td >106%</td>
+                                <td >44%</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">Ha Nguyen</th>
+                                <td>37.5</td>
+                                <td>5</td>
+                                <td >50%</td>
+                                <td >2.50</td>
+                                <td >17.71</td>
+                                <td >181%</td>
+                                <td >75%</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">Hossein Monfared</th>
+                                <td>32</td>
+                                <td>5</td>
+                                <td >50%</td>
+                                <td >2.50</td>
+                                <td >17.71</td>
+                                <td >181%</td>
+                                <td >75%</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">Justin Harer</th>
+                                <td>35</td>
+                                <td>5</td>
+                                <td >100%</td>
+                                <td >5.0</td>
+                                <td >35.42</td>
+                                <td >99%</td>
+                                <td >41%</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">Malek Itani</th>
+                                <td>35</td>
+                                <td>5</td>
+                                <td >100%</td>
+                                <td >5.0</td>
+                                <td >35.42</td>
+                                <td >99%</td>
+                                <td >41%</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">Mark McCaleb</th>
+                                <td>32</td>
+                                <td>5</td>
+                                <td >100%</td>
+                                <td >5.0</td>
+                                <td >3542</td>
+                                <td >90%</td>
+                                <td >38%</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">Sampson Tang</th>
+                                <td>47.5</td>
+                                <td>5</td>
+                                <td >100%</td>
+                                <td >5.0</td>
+                                <td >35.42</td>
+                                <td >90%</td>
+                                <td >38%</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">Tuan Tran</th>
+                                <td>41.5</td>
+                                <td>5</td>
+                                <td >100%</td>
+                                <td >5.0</td>
+                                <td >35.42</td>
+                                <td >117%</td>
+                                <td >49%</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">Xuan Nguyen</th>
+                                <td>41</td>
+                                <td>5</td>
+                                <td >100%</td>
+                                <td >5.0</td>
+                                <td >35.42</td>
+                                <td >116%</td>
+                                <td >48%</td>
+                              </tr>
 
-                        </tbody>
-                        <tfoot class="thead-light">
-                          <tr>
-                            <td>Grand Total</td>
-                            <td>606.375</td>
-                            <td></td>
-                            <td></td>
-                            <td>800.00/td>
-                            <td>566.67</td>
-                            <td>107%</td>
-                            <td>41.96%</td>
-                          </tr>
-                        </tfoot>
-                      </table>
-            </div>
+                            </tbody>
+                            <tfoot class="thead-light">
+                              <tr>
+                                <td>Grand Total</td>
+                                <td>606.375</td>
+                                <td></td>
+                                <td></td>
+                                <td>800.00/td>
+                                <td>566.67</td>
+                                <td>107%</td>
+                                <td>41.96%</td>
+                              </tr>
+                            </tfoot>
+                          </table>
+                </div>
 
-              </div>
+                </div>
 
                 <div class="card-body">
-                  <p>May 2022 Activity Report Status</p>
-                  <div class="table-responsive">
-                    <table class="table border card-table table-vcenter text-nowrap">
-                      <thead class="thead-light">
-                        <tr>
-                          <th>Inspector</th>
-                          <th>Engineer Working</th>
-                          <th>Supervisors Review</th>
-                          <th>Supervisors Approved</th>
-                          <th>Engineer Editing</th>
-                          <th>Grand Total</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <th scope="row">Almee</th>
-                          <td>1</td>
-                          <td>7</td>
-                          <td ></td>
-                          <td ></td>
-                          <td >8</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">Al Giese</th>
-                          <td>2</td>
-                          <td>2</td>
-                          <td ></td>
-                          <td ></td>
-                          <td >8</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">Alula Gebrmendan</th>
-                          <td>1</td>
-                          <td>7</td>
-                          <td ></td>
-                          <td ></td>
-                          <td >8</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">Bita Emami</th>
-                          <td>4</td>
-                          <td></td>
-                          <td >3</td>
-                          <td ></td>
-                          <td >7</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">Bob Gorham</th>
-                          <td></td>
-                          <td></td>
-                          <td ></td>
-                          <td ></td>
-                          <td ></td>
-                        </tr>
-                        <tr>
-                          <th scope="row">Chuck MacDonald</th>
-                          <td>6</td>
-                          <td>1</td>
-                          <td ></td>
-                          <td ></td>
-                          <td >7</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">Dan Le</th>
-                          <td>5</td>
-                          <td>1</td>
-                          <td >3</td>
-                          <td ></td>
-                          <td >9</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">Enrique Jimenez</th>
-                          <td>4</td>
-                          <td>2</td>
-                          <td >3</td>
-                          <td >2</td>
-                          <td >11</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">Hu Nguyen</th>
-                          <td>7</td>
-                          <td></td>
-                          <td ></td>
-                          <td ></td>
-                          <td >7</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">Hossein Monfared</th>
-                          <td></td>
-                          <td></td>
-                          <td >3</td>
-                          <td ></td>
-                          <td >3</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">Justin Harer</th>
-                          <td>4</td>
-                          <td></td>
-                          <td ></td>
-                          <td ></td>
-                          <td >4</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">Linda Zigler</th>
-                          <td></td>
-                          <td></td>
-                          <td ></td>
-                          <td ></td>
-                          <td ></td>
-                        </tr>
-                        <tr>
-                          <th scope="row">Malek Itani</th>
-                          <td></td>
-                          <td>8</td>
-                          <td ></td>
-                          <td ></td>
-                          <td >8</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">Mark McCaleb/th>
-                          <td>1</td>
-                          <td>12</td>
-                          <td ></td>
-                          <td ></td>
-                          <td >13</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">Sampson Tang</th>
-                          <td>2</td>
-                          <td>1</td>
-                          <td >2</td>
-                          <td ></td>
-                          <td >5</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">Tuan Tran</th>
-                          <td>3</td>
-                          <td>3</td>
-                          <td >6</td>
-                          <td ></td>
-                          <td >12</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">Xuan Nyugen</th>
-                          <td>5</td>
-                          <td></td>
-                          <td >3</td>
-                          <td ></td>
-                          <td >8</td>
-                        </tr>
+                      <p>May 2022 Activity Report Status</p>
+                      <div class="table-responsive">
+                        <table class="table border card-table table-vcenter text-nowrap">
+                          <thead class="thead-light">
+                            <tr>
+                              <th>Inspector</th>
+                              <th>Engineer Working</th>
+                              <th>Supervisors Review</th>
+                              <th>Supervisors Approved</th>
+                              <th>Engineer Editing</th>
+                              <th>Grand Total</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <th scope="row">Almee</th>
+                              <td>1</td>
+                              <td>7</td>
+                              <td ></td>
+                              <td ></td>
+                              <td >8</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Al Giese</th>
+                              <td>2</td>
+                              <td>2</td>
+                              <td ></td>
+                              <td ></td>
+                              <td >8</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Alula Gebrmendan</th>
+                              <td>1</td>
+                              <td>7</td>
+                              <td ></td>
+                              <td ></td>
+                              <td >8</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Bita Emami</th>
+                              <td>4</td>
+                              <td></td>
+                              <td >3</td>
+                              <td ></td>
+                              <td >7</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Bob Gorham</th>
+                              <td></td>
+                              <td></td>
+                              <td ></td>
+                              <td ></td>
+                              <td ></td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Chuck MacDonald</th>
+                              <td>6</td>
+                              <td>1</td>
+                              <td ></td>
+                              <td ></td>
+                              <td >7</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Dan Le</th>
+                              <td>5</td>
+                              <td>1</td>
+                              <td >3</td>
+                              <td ></td>
+                              <td >9</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Enrique Jimenez</th>
+                              <td>4</td>
+                              <td>2</td>
+                              <td >3</td>
+                              <td >2</td>
+                              <td >11</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Hu Nguyen</th>
+                              <td>7</td>
+                              <td></td>
+                              <td ></td>
+                              <td ></td>
+                              <td >7</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Hossein Monfared</th>
+                              <td></td>
+                              <td></td>
+                              <td >3</td>
+                              <td ></td>
+                              <td >3</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Justin Harer</th>
+                              <td>4</td>
+                              <td></td>
+                              <td ></td>
+                              <td ></td>
+                              <td >4</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Linda Zigler</th>
+                              <td></td>
+                              <td></td>
+                              <td ></td>
+                              <td ></td>
+                              <td ></td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Malek Itani</th>
+                              <td></td>
+                              <td>8</td>
+                              <td ></td>
+                              <td ></td>
+                              <td >8</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Mark McCaleb/th>
+                              <td>1</td>
+                              <td>12</td>
+                              <td ></td>
+                              <td ></td>
+                              <td >13</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Sampson Tang</th>
+                              <td>2</td>
+                              <td>1</td>
+                              <td >2</td>
+                              <td ></td>
+                              <td >5</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Tuan Tran</th>
+                              <td>3</td>
+                              <td>3</td>
+                              <td >6</td>
+                              <td ></td>
+                              <td >12</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Xuan Nyugen</th>
+                              <td>5</td>
+                              <td></td>
+                              <td >3</td>
+                              <td ></td>
+                              <td >8</td>
+                            </tr>
 
-                      </tbody>
-                      <tfoot class="thead-light">
-                        <tr>
-                          <td>Grand Total</td>
-                          <td>52</td>
-                          <td>44</td>
-                          <td>25</td>
-                          <td>2</td>
-                          <td>123</td>
-                        </tr>
-                      </tfoot>
-                    </table>
-                  </div>
-                  <div echarts [options]="echartProgressBar"></div>
+                          </tbody>
+                          <tfoot class="thead-light">
+                            <tr>
+                              <td>Grand Total</td>
+                              <td>52</td>
+                              <td>44</td>
+                              <td>25</td>
+                              <td>2</td>
+                              <td>123</td>
+                            </tr>
+                          </tfoot>
+                        </table>
+                      </div>
+                      <!-- <div echarts [options]="echartProgressBar"></div> -->
+
+
+                </div>
+         </div>
+       </div>
 
 
       </div>
-  </div>
+
+
+
+
+
+
+
 </div>
-
-
-</div>
-
-
-
-<!-- <div class="row row-sm">
-  <div class="col-lg-6 col-md-12">
-    <div class="card mg-b-20">
-      <div class="card-body">
-        <div class="main-content-label mg-b-5" style="display: flex;justify-content: center;">
-          <h3>Accidents</h3>
-      </div>
-        <div echarts [options]="echartDottedLine"></div>
-        <div echarts [options]="echartBasicBar"></div>
-        <div echarts [options]="echartTotalCost"></div>
-      </div>
-    </div>
-
-  </div>
-  <div class="col-lg-6 col-md-12">
-    <div class="card mg-b-20">
-      <div class="card-body">
-        <div class="main-content-label mg-b-5" style="display: flex;justify-content: center;">
-          <h3>Enforcement</h3>
-      </div>
-      <div class="table-responsive">
-        <div class="p-5">
-          <table>
-            <tr>
-              <th>Probable Violation Categories</th>
-              <th>Intrastate</th>
-            </tr>
-            <tr>
-              <td>Number carried over from all previous CY’s</td>
-              <td>62</td>
-            </tr>
-            <tr>
-              <td>Number Found During CY</td>
-              <td>53</td>
-            </tr>
-            <tr>
-              <td>Number submitted for DOT action [60106 Agreement agent only]</td>
-              <td>0</td>
-            </tr>
-            <tr>
-              <td>Number corrected during CY (including carry over from previous year(s))</td>
-              <td>43</td>
-            </tr>
-            <tr>
-              <td>Number to be corrected at end of CY (including carry over)</td>
-              <td>70</td>
-            </tr>
-           </table>
-        </div>
-      <div class="p-5">
-        <table>
-          <tr>
-            <th>Number of Compliance Actions Taken (see definition)</th>
-            <th>Civil Penalties</th>
-           </tr>
-          <tr>
-            <td>31</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Number assessed during CY</td>
-            <td>4</td>
-          </tr>
-          <tr>
-            <td>Dollars assessed during CY</td>
-            <td>$30,300.00</td>
-          </tr>
-          <tr>
-            <td>Number collected during CY</td>
-            <td>1</td>
-          </tr>
-          <tr>
-            <td>Dollars collected during CY</td>
-            <td>$9,900.00</td>
-          </tr>
-         </table>
-      </div>
-
-
-      </div>
-
-
-        <div echarts [options]="echartTotalCost"></div>
-        <div style="padding-bottom: 400px;"></div>
-
-    </div>
-    </div>
-  </div>
-
-
-</div> -->
-
-<div class="row row-sm">
-  <!-- <div class="col-lg-6 col-md-12">
-
-    <div class="card mg-b-20">
-      <div class="card-body">
-        <div class="main-content-label mg-b-5" style="display: flex;justify-content: center;">
-          <h3>Integrety Assessment</h3>
-        </div>
-        <div class="row">
-          <div class="col-lg-6">
-            <div echarts [options]="echartBasicBar"></div>
-
-          </div>
-          <div class="col-lg-6">
-            <div echarts [options]="echartDottedLine"></div>
-          </div>
-        </div>
-        <div echarts [options]="echartTotalCost"></div>
-      </div>
-    </div>
-
-  </div> -->
-  <div class="col-lg-6 col-md-12">
-
-    <div class="card mg-b-20">
-      <div class="card-body">
-        <div class="main-content-label mg-b-5" style="display: flex;justify-content: center;">
-          <h3>Assignments</h3>
-        </div>
-        <div echarts [options]="echartMultipleYaxis"></div>
-        <div></div>
-      </div>
-
-    </div>
-
-  </div>
-</div>
-</div>
-
-
-
-
-<!-- <div class="row">
-  <div class="col-lg-8 col-md-12" >
-    <div class="card mg-b-20">
-      <div class="card-body">
-        <div class="main-content-label mg-b-5" style="display: flex;justify-content: center;">
-          <h3>Grand Total</h3>
-        </div>
-        <div class="table-responsive">
-          <table class="table border card-table table-vcenter text-nowrap">
-                      <thead class="thead-light">
-                        <th>Operator Type</th>
-                        <th colspan="2">State Agency Jurisdiction</th>
-                        <th>No. of Operators</th>
-                        <th colspan="2">Operators Inspected</th>
-                        <th>No. of Inspection Units</th>
-                        <th colspan="2">Units Inspected</th>
-                      </thead>
-                      <tr>
-                      <th></th>
-                      <th>No</th>
-                      <th>Yes</th>
-                      <th></th>
-                      <th>#</th>
-                      <th>%</th>
-                      <th></th>
-                      <th>#</th>
-                      <th>%</th>
-                    </tr>
-                      <tr>
-                        <td>Hazardous Liquid</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td>Intrastate Refined Petroleum Products</td>
-                        <td></td>
-                        <td>X/6105</td>
-                        <td>24</td>
-                        <td>23</td>
-                        <td>95.8%</td>
-                        <td>60</td>
-                        <td>58</td>
-                        <td>96.78%</td>
-                      </tr>
-                      <tr>
-                        <td>Intrastate HVL Flamm Toxic</td>
-                        <td></td>
-                        <td>X/6105</td>
-                        <td>24</td>
-                        <td>23</td>
-                        <td>95.8%</td>
-                        <td>60</td>
-                        <td>58</td>
-                        <td>96.78%</td>
-                      </tr>
-                      <tr>
-                        <td>Intrastate Biofuel</td>
-                        <td></td>
-                        <td>X/6105</td>
-                        <td>24</td>
-                        <td>23</td>
-                        <td>95.8%</td>
-                        <td>60</td>
-                        <td>58</td>
-                        <td>96.78%</td>
-                      </tr>
-                      <tr>
-                        <td>Interstate Crude Oil</td>
-                        <td></td>
-                        <td>X/6105</td>
-                        <td>24</td>
-                        <td>23</td>
-                        <td>95.8%</td>
-                        <td>60</td>
-                        <td>58</td>
-                        <td>96.78%</td>
-                      </tr>
-                      <tr>
-                        <td>Interstate HVL Flamm Toxic</td>
-                        <td></td>
-                        <td>X/6105</td>
-                        <td>24</td>
-                        <td>23</td>
-                        <td>95.8%</td>
-                        <td>60</td>
-                        <td>58</td>
-                        <td>96.78%</td>
-                      </tr>
-                      <tr>
-                        <td>Interstate CO2</td>
-                        <td></td>
-                        <td>X/6105</td>
-                        <td>24</td>
-                        <td>23</td>
-                        <td>95.8%</td>
-                        <td>60</td>
-                        <td>58</td>
-                        <td>96.78%</td>
-                      </tr>
-                      <tr>
-                        <td>Interstate Biofuel</td>
-                        <td></td>
-                        <td>X/6105</td>
-                        <td>24</td>
-                        <td>23</td>
-                        <td>95.8%</td>
-                        <td>60</td>
-                        <td>58</td>
-                        <td>96.78%</td>
-                      </tr>
-                      <tr>
-                        <td>Total</td>
-                        <td></td>
-                        <td></td>
-                        <td>64</td>
-                        <td>60</td>
-                        <td>93.8%</td>
-                        <td>135</td>
-                        <td>130</td>
-                        <td>96.78%</td>
-                      </tr>
-          </table>
-
-        </div>
-
-      </div>
-    </div>
-  </div>
-  <div class="col-lg-4 col-md-12">
-    <div class="card mg-b-20">
-      <div class="card-body">
-      <div class="table-responsive">
-        <div class="">
-          <table>
-            <tr>
-              <th>Probable Violation Categories</th>
-              <th>Intrastate</th>
-
-            </tr>
-            <tr>
-              <td>Number Violated over from all previous CY's</td>
-              <td>62</td>
-            </tr>
-            <tr>
-              <td>Number Found During CY</td>
-              <td>53</td>
-            </tr>
-            <tr>
-              <td>Number submitted for DOT action [60106 Agreement agent only]</td>
-              <td>0</td>
-            </tr>
-            <tr>
-              <td>Number corrected during CY (including carry over from previous year(s))</td>
-              <td>43</td>
-            </tr>
-            <tr>
-              <td>Number to be corrected at end of CY (including carry over)</td>
-              <td>70</td>
-            </tr>
-          </table>
-
-
-        </div>
-
-
-      </div>
-      </div>
-      <div class="table-responsive">
-        <div class="p-5">
-        <table>
-          <thead>
-            <th>Number of Compliance Actions Taken</th>
-            <th></th>
-          </thead>
-          <tr>
-            <td>(see definition)</td>
-            <td>31</td>
-          </tr>
-        </table>
-        </div>
-      </div>
-      <div class="table-responsive">
-        <div class="p-5">
-          <table class="">
-            <tr>
-              <th>Civil Penalties</th>
-
-            </tr>
-            <tr>
-            <td>Number assessed during CY</td>
-            <td>4</td>
-            </tr>
-            <tr>
-            <td>Dollars assessed during CY</td>
-            <td>$30.4555</td>
-            </tr>
-            <tr>
-              <td>Number collected during CY</td>
-              <td>1</td>
-            </tr>
-
-            <tr>
-            <td>Dollars collected during CY</td>
-            <td>$9,900.00</td>
-          </tr>
-          </table>
-        </div>
-      </div>
-
-
-      </div>
-    </div>
-</div> -->
-
-
-
-
-
-
-
-
-
-
 
 
 

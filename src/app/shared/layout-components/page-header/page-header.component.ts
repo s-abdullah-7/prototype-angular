@@ -11,6 +11,7 @@ export class PageHeaderComponent implements OnInit {
   @Input() title!: string;
   @Input() items!: any[];
   @Input() active_item!: string;
+  @Input() active_item2!: string;
   constructor() { }
   dateObj: Date
 

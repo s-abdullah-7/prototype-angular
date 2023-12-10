@@ -1,4 +1,4 @@
-<app-page-header title="Home"  active_item=""></app-page-header>
+<app-page-header title="Home"  active_item="Dashboards"></app-page-header>
 
 <!-- ROW OPEN -->
   <div class="row">
@@ -23,26 +23,52 @@
             </div>
           </div>
         </div><!-- COL END -->
+
+
+
         <div class="col-md-12 col-xl-4">
-          <div class="card" [(ngbCollapse)]="isClosed2">
-            <div class="card-header bg-secondary br-tr-3 br-tl-3">
-              <i class="fa fa-droplet custom-icons"></i>
-              <h3 class="card-title text-white">Pipeline</h3>
+          <div class="card" [(ngbCollapse)]="isClosed4">
+            <div class="card-header bg-success br-tr-3 br-tl-3">
+              <i class="mdi mdi-account-search " style="padding-left: 14px; padding-right: 14px; color: white; font-size: 30px; "></i>
+              <h3 class="card-title text-white">Investigation</h3>
               <div class="card-options ">
                 <a href="javascript:void(0)" class="card-options-collapse" data-bs-toggle="card-collapse"
-                  (click)="Collapsetoggle2()" [attr.aria-expanded]="!isCollapsed2"><i
-                    class="fe text-white fe-chevron-{{ !isCollapsed2 ?  'up' : 'down'}}"></i></a>
+                  (click)="Collapsetoggle4()" [attr.aria-expanded]="!isCollapsed4"><i
+                    class="fe text-white fe-chevron-{{ !isCollapsed4 ?  'up' : 'down'}}"></i></a>
               </div>
             </div>
-            <div [(ngbCollapse)]="isCollapsed2">
+            <div [(ngbCollapse)]="isCollapsed4">
               <div class="card-body">
-                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>Operator Search</h5>
-                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>IU Search</h5>
-                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>Edit Date</h5>
+                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>Spill Notification</h5>
+                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>Accident Records</h5>
+                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>Accident Investigation Data Request</h5>
               </div>
             </div>
           </div>
         </div><!-- COL END -->
+
+        <div class="col-md-12 col-xl-4">
+          <div class="card" [(ngbCollapse)]="isClosed8">
+            <div class="card-header bg-cyan br-tr-3 br-tl-3">
+              <i class="fa fa-paper-plane custom-icons"></i>
+              <h3 class="card-title text-white">Enforcement</h3>
+              <div class="card-options ">
+                <a href="javascript:void(0)" class="card-options-collapse" data-bs-toggle="card-collapse"
+                  (click)="Collapsetoggle8()" [attr.aria-expanded]="!isCollapsed8"><i
+                    class="fe text-white fe-chevron-{{ !isCollapsed5 ?  'up' : 'down'}}"></i></a>
+              </div>
+            </div>
+            <div [(ngbCollapse)]="isCollapsed8">
+              <div class="card-body">
+                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>Compliance Actions</h5>
+                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>Civil Penalty </h5>
+                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>Reports </h5>
+              </div>
+            </div>
+          </div>
+        </div><!-- COL END -->
+
+
         <div class="col-md-12 col-xl-4">
           <div class="card" [(ngbCollapse)]="isClosed3">
             <div class="card-header bg-warning br-tr-3 br-tl-3">
@@ -65,65 +91,9 @@
             </div>
           </div>
         </div><!-- COL END -->
-        <div class="col-md-12 col-xl-4">
-          <div class="card" [(ngbCollapse)]="isClosed4">
-            <div class="card-header bg-success br-tr-3 br-tl-3">
-              <i class="mdi mdi-account-search " style="padding-left: 14px; padding-right: 14px; color: white; font-size: 30px; "></i>
-              <h3 class="card-title text-white">Investigation</h3>
-              <div class="card-options ">
-                <a href="javascript:void(0)" class="card-options-collapse" data-bs-toggle="card-collapse"
-                  (click)="Collapsetoggle4()" [attr.aria-expanded]="!isCollapsed4"><i
-                    class="fe text-white fe-chevron-{{ !isCollapsed4 ?  'up' : 'down'}}"></i></a>
-              </div>
-            </div>
-            <div [(ngbCollapse)]="isCollapsed4">
-              <div class="card-body">
-                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>Spill Notification</h5>
-                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>Accident</h5>
-              </div>
-            </div>
-          </div>
-        </div><!-- COL END -->
-        <div class="col-md-12 col-xl-4">
-          <div class="card" [(ngbCollapse)]="isClosed5">
-            <div class="card-header bg-gray br-tr-3 br-tl-3">
-              <i class="fa fa-paper-plane custom-icons"></i>
-              <h3 class="card-title text-white">State Waiver</h3>
-              <div class="card-options ">
-                <a href="javascript:void(0)" class="card-options-collapse" data-bs-toggle="card-collapse"
-                  (click)="Collapsetoggle5()" [attr.aria-expanded]="!isCollapsed5"><i
-                    class="fe text-white fe-chevron-{{ !isCollapsed5 ?  'up' : 'down'}}"></i></a>
-              </div>
-            </div>
-            <div [(ngbCollapse)]="isCollapsed5">
-              <div class="card-body">
-                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>Operator Search</h5>
-                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>IU Search</h5>
-              </div>
-            </div>
-          </div>
-        </div><!-- COL END -->
-        <div class="col-md-12 col-xl-4">
-          <div class="card" [(ngbCollapse)]="isClosed6">
-            <div class="card-header bg-green br-tr-3 br-tl-3">
-              <i class="fa fa-map custom-icons"></i>
-              <h3 class="card-title text-white">Mapping System</h3>
-              <div class="card-options ">
-                <a href="javascript:void(0)" class="card-options-collapse" data-bs-toggle="card-collapse"
-                  (click)="Collapsetoggle6()" [attr.aria-expanded]="!isCollapsed6"><i
-                    class="fe text-white fe-chevron-{{ !isCollapsed6 ?  'up' : 'down'}}"></i></a>
-              </div>
-            </div>
-            <div [(ngbCollapse)]="isCollapsed6">
-              <div class="card-body">
-                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>Production Maps</h5>
-                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>GIS Dashboard Management</h5>
-                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>Map Applications</h5>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- COL END -->
+
+
+
         <div class="col-md-12 col-xl-4">
           <div class="card" [(ngbCollapse)]="isClosed7">
             <div class="card-header bg-info br-tr-3 br-tl-3">
@@ -137,53 +107,14 @@
             </div>
             <div [(ngbCollapse)]="isCollapsed7">
               <div class="card-body">
-                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>Operator Search</h5>
-                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>IU Search</h5>
+                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>Compliance Actions</h5>
+                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>Civil Penalty Management</h5>
+                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>Document Management</h5>
+                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>Reporting & Analytics</h5>
               </div>
             </div>
           </div>
         </div><!-- COL END -->
-        <div class="col-md-12 col-xl-4">
-          <div class="card" [(ngbCollapse)]="isClosed8">
-            <div class="card-header bg-cyan br-tr-3 br-tl-3">
-              <i class="fa fa-paper-plane custom-icons"></i>
-              <h3 class="card-title text-white">Enforcement</h3>
-              <div class="card-options ">
-                <a href="javascript:void(0)" class="card-options-collapse" data-bs-toggle="card-collapse"
-                  (click)="Collapsetoggle8()" [attr.aria-expanded]="!isCollapsed8"><i
-                    class="fe text-white fe-chevron-{{ !isCollapsed5 ?  'up' : 'down'}}"></i></a>
-              </div>
-            </div>
-            <div [(ngbCollapse)]="isCollapsed8">
-              <div class="card-body">
-                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>Operator Search</h5>
-                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>IU Search</h5>
-              </div>
-            </div>
-          </div>
-        </div><!-- COL END -->
-        <div class="col-md-12 col-xl-4">
-          <div class="card" [(ngbCollapse)]="isClosed9">
-            <div class="card-header bg-yellow br-tr-3 br-tl-3">
-              <i class="fa fa-folder custom-icons"></i>
-              <h3 class="card-title text-white">Document Library</h3>
-              <div class="card-options ">
-                <a href="javascript:void(0)" class="card-options-collapse" data-bs-toggle="card-collapse"
-                  (click)="Collapsetoggle9()" [attr.aria-expanded]="!isCollapsed9"><i
-                    class="fe text-white fe-chevron-{{ !isCollapsed9 ?  'up' : 'down'}}"></i></a>
-              </div>
-            </div>
-            <div [(ngbCollapse)]="isCollapsed9">
-              <div class="card-body">
-                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>Assignments</h5>
-                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>Planning</h5>
-                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>Training</h5>
-                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>Deferrals</h5>
-                <h5 class="font-weight-normal mb-"><i class="fa fa-circle icon-padding"></i>CBAT</h5>
-              </div>
-            </div>
-          </div>
-        </div>
 
         <div class="col-md-12 col-xl-4">
           <div class="card" [(ngbCollapse)]="isClosed10">
@@ -205,7 +136,86 @@
               </div>
             </div>
           </div>
+        </div><!--Col End-->
+
+
+
+        <div class="col-md-12 col-xl-4">
+          <div class="card" [(ngbCollapse)]="isClosed6">
+            <div class="card-header bg-green br-tr-3 br-tl-3">
+              <i class="fa fa-map custom-icons"></i>
+              <h3 class="card-title text-white">Mapping System</h3>
+              <div class="card-options ">
+                <a href="javascript:void(0)" class="card-options-collapse" data-bs-toggle="card-collapse"
+                  (click)="Collapsetoggle6()" [attr.aria-expanded]="!isCollapsed6"><i
+                    class="fe text-white fe-chevron-{{ !isCollapsed6 ?  'up' : 'down'}}"></i></a>
+              </div>
+            </div>
+            <div [(ngbCollapse)]="isCollapsed6">
+              <div class="card-body">
+                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>Production Maps</h5>
+                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>GIS Dashboard Management</h5>
+                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>Map Applications</h5>
+              </div>
+            </div>
+          </div>
         </div>
+        <!-- COL END -->
+
+
+
+
+
+
+
+
+        <div class="col-md-12 col-xl-4">
+          <div class="card" [(ngbCollapse)]="isClosed9">
+            <div class="card-header bg-yellow br-tr-3 br-tl-3">
+              <i class="fa fa-folder custom-icons"></i>
+              <h3 class="card-title text-white">Document Library</h3>
+              <div class="card-options ">
+                <a href="javascript:void(0)" class="card-options-collapse" data-bs-toggle="card-collapse"
+                  (click)="Collapsetoggle9()" [attr.aria-expanded]="!isCollapsed9"><i
+                    class="fe text-white fe-chevron-{{ !isCollapsed9 ?  'up' : 'down'}}"></i></a>
+              </div>
+            </div>
+            <div [(ngbCollapse)]="isCollapsed9">
+              <div class="card-body">
+                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>File Storage</h5>
+                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>Data Relationships</h5>
+                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>Access Management</h5>
+              </div>
+            </div>
+          </div>
+        </div><!--Col End-->
+
+
+
+
+
+        <div class="col-md-12 col-xl-4">
+          <div class="card" [(ngbCollapse)]="isClosed2">
+            <div class="card-header bg-secondary br-tr-3 br-tl-3">
+              <i class="fa fa-droplet custom-icons"></i>
+              <h3 class="card-title text-white">Pipeline</h3>
+              <div class="card-options ">
+                <a href="javascript:void(0)" class="card-options-collapse" data-bs-toggle="card-collapse"
+                  (click)="Collapsetoggle2()" [attr.aria-expanded]="!isCollapsed2"><i
+                    class="fe text-white fe-chevron-{{ !isCollapsed2 ?  'up' : 'down'}}"></i></a>
+              </div>
+            </div>
+            <div [(ngbCollapse)]="isCollapsed2">
+              <div class="card-body">
+                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>Operator Search</h5>
+                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>IU Search</h5>
+                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>Edit Date</h5>
+              </div>
+            </div>
+          </div>
+        </div><!-- COL END -->
+
+
 
         <div class="col-md-12 col-xl-4">
           <div class="card" [(ngbCollapse)]="isClosed11">
@@ -220,22 +230,49 @@
             </div>
             <div [(ngbCollapse)]="isCollapsed11">
               <div class="card-body">
-                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>Assignments</h5>
-                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>Planning</h5>
-                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>Training</h5>
-                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>Deferrals</h5>
-                <h5 class="font-weight-normal mb-"><i class="fa fa-circle icon-padding"></i>CBAT</h5>
+                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>User Roles</h5>
+                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>Change Management</h5>
+                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>Billing</h5>
               </div>
             </div>
           </div>
         </div>
 
+        <div class="col-md-12 col-xl-4">
+          <div class="card" [(ngbCollapse)]="isClosed5">
+            <div class="card-header bg-gray br-tr-3 br-tl-3">
+              <i class="fa fa-paper-plane custom-icons"></i>
+              <h3 class="card-title text-white">State Waiver</h3>
+              <div class="card-options ">
+                <a href="javascript:void(0)" class="card-options-collapse" data-bs-toggle="card-collapse"
+                  (click)="Collapsetoggle5()" [attr.aria-expanded]="!isCollapsed5"><i
+                    class="fe text-white fe-chevron-{{ !isCollapsed5 ?  'up' : 'down'}}"></i></a>
+              </div>
+            </div>
+            <div [(ngbCollapse)]="isCollapsed5">
+              <div class="card-body">
+                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>Overview</h5>
+                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>Metrics</h5>
+                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>Data Requests</h5>
+                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>Compliance</h5>
+                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>Documents Repository</h5>
+                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>Notifications</h5>
+                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>Reporting</h5>
+              </div>
+            </div>
+          </div>
+        </div><!-- COL END -->
+
 
       </div>
+
+
 
     </div>
 
     <!--COL END-->
+
+
 
     <div class="col-xl-4 col-md-12" >
       <div class="card overflow-hidden">
