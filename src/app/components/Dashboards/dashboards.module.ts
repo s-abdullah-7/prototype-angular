@@ -17,11 +17,11 @@ import { StatisticsComponent } from './Program-Status/statistics/statistics.comp
 import { DashboardsRoutingModule } from './dashboards-routing.module';
 import { HomePageComponent } from './home-page/home-page.component';
 import { AdminDashboardComponent } from './admin-dashbaord/admin-dashbaord.component';
-import { UserComponent } from './user/user.component';
 import { UserEditComponent } from './user-edit/user-edit.component';
 import { UserAddComponent } from './user-add/user-add.component';
 import { HydrostaticFirmsComponent } from './hydrostatic-firms/hydrostatic-firms.component';
 import { StateWaiverComponent } from './state-waiver/state-waiver.component';
+import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
 
 
 
@@ -32,11 +32,11 @@ import { StateWaiverComponent } from './state-waiver/state-waiver.component';
     PipelineDataComponent,
     HomePageComponent,
     AdminDashboardComponent,
-    UserComponent,
     UserEditComponent,
     UserAddComponent,
     HydrostaticFirmsComponent,
-    StateWaiverComponent
+    StateWaiverComponent,
+    UserDashboardComponent
 
     ],
     imports: [

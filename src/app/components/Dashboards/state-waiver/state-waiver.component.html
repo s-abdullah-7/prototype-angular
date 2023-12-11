@@ -1,7 +1,79 @@
-<app-page-header title="Home"  active_item="State Waiver"></app-page-header>
+<app-page-header title="Home"  active_item="State Waiver" active_item2="Dashboard"></app-page-header>
 
 <div class="row mt-5">
-  <div class="col-md-8">
+  <div class="col-sm-12 col-md-12 col-xl-8">
+    <div class="card" [(ngbCollapse)]="isClosed2">
+      <div class="card-header">
+        <div class="card-title">State Waiver</div>
+        <div class="card-options">
+          <a href="javascript:void(0)" class="card-options-collapse" data-bs-toggle="card-collapse"
+            (click)="Collapsetoggle2()" [attr.aria-expanded]="!isCollapsed2"><i
+              class="fe fe-chevron-{{ !isCollapsed2 ? 'up' : 'down'}}"></i></a>
+          <a href="javascript:void(0)" class="card-options-remove" data-bs-toggle="card-remove" (click)="Closetoggle2()"
+            [attr.aria-expanded]="!isClosed2"><i class="fe fe-x"></i></a>
+        </div>
+      </div>
+      <div class="card-body" [(ngbCollapse)]="isCollapsed2">
+        <div class="mb-0">
+          <div id="chart">
+            <apx-chart [series]="chartOptions.series" [chart]="barData.chart" [yaxis]="chartOptions.yaxis"
+              [xaxis]="barData.xaxis" [dataLabels]="chartOptions.dataLabels" [stroke]="barData.stroke"
+              [plotOptions]="chartOptions.plotOptions" [colors]="apexData.colors" [tooltip]="chartOptions.tooltip"
+              [grid]="chartOptions.grid"></apx-chart>
+          </div>
+          <div style="margin-bottom: 150px;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4 col-sm-12 col-lg-4">
+  <div class="row">
+  <div class="col-lg-12">
+      <div class="card">
+      <div class="card-header">
+        <h3 class="card-title">State Waiver Status</h3>
+      </div>
+      <div class="card-body">
+        <p><ngb-progressbar type=" bg-green " [value]="60" [striped]="true">Approved</ngb-progressbar></p>
+        <p><ngb-progressbar type=" bg-yellow " [value]="40" [striped]="true">In Review</ngb-progressbar></p>
+        <p><ngb-progressbar type=" bg-red " [value]="10" [striped]="true">Expired</ngb-progressbar></p>
+        <p><ngb-progressbar type=" bg-blue " [value]="20" [striped]="true">Active</ngb-progressbar></p>
+
+      </div>
+    </div>
+    </div>
+
+    <div class="col-sm-12 col-md-3 col-lg-12">
+      <div class="card overflow-hidden">
+          <div class="card-body">
+              <div class="main-content-label mg-b-5 " style="font-weight: bold;">
+                  State Waiver
+              </div>
+
+              <div class="chartjs-wrapper-demo">
+
+
+                  <canvas baseChart [data]="PieChartData" [options]="PieChartOptions"
+                      [type]="PieChartType">
+                  </canvas>
+              </div>
+          </div>
+      </div>
+  </div><!-- col-6 -->
+
+  </div>
+
+
+
+  </div><!-- COL-END -->
+
+
+
+
+
+
+  <div class="col-lg-12">
     <div class="card">
       <div class="card-header">
         <div class="table-responsive table-lg">
@@ -32,7 +104,7 @@
                 <td>{{ waiver.applicationDate }}</td>
                 <td>{{ waiver.expirationDate }}</td>
                 <td>
-                  <button class="btn btn-sm btn-primary-light" type="button">Edit</button>
+                  <button class="btn btn-sm btn-primary-light" type="button">View</button>
                 </td>
               </tr>
             </tbody>
@@ -43,26 +115,6 @@
     </div>
 
   </div><!--Col End-->
-
-
-
-
-  <div class="col-md-4 col-sm-12">
-    <div class="card">
-      <div class="card-header">
-        <h3 class="card-title">State Waiver Status</h3>
-      </div>
-      <div class="card-body">
-        <p><ngb-progressbar type=" bg-green " [value]="60" [striped]="true">Approved</ngb-progressbar></p>
-        <p><ngb-progressbar type=" bg-yellow " [value]="40" [striped]="true">In Review</ngb-progressbar></p>
-        <p><ngb-progressbar type=" bg-red " [value]="10" [striped]="true">Expired</ngb-progressbar></p>
-        <p><ngb-progressbar type=" bg-blue " [value]="20" [striped]="true">Active</ngb-progressbar></p>
-
-      </div>
-    </div>
-  </div><!-- COL-END -->
-
-
 
 
 </div>

@@ -201,27 +201,28 @@ export let barChart2Data1: ChartConfiguration['data'] = {datasets:[
 export let PieChartData: ChartConfiguration['data'] = {datasets: [
 
   {
-    data: [20, 20, 30, 5, 25],
-    backgroundColor: ['#285cf7', '#f10075', '#8500ff', '#7987a1', '#74de00'],
-    circumference:180,
+    data: [20, 30, 5, 25],
+    backgroundColor: ['#74de00', '#FFF111' ,'#f10', '#285cf7' , ],
     rotation:270,
     borderWidth: 2,
 
     borderRadius: 2,
 
 
+
   }
 
 ],
 
-labels:  ['Jan', 'Feb', 'Mar', 'Apr', 'May']
+labels:  ['Approved', 'In Review', 'Expired', 'Active',]
 }
 export let PieChartOptions: ChartConfiguration['options'] = {
   maintainAspectRatio: false,
   responsive: true,
 
+
   plugins:{legend: {
-    display: false,
+    position:"bottom",
 
 
   },

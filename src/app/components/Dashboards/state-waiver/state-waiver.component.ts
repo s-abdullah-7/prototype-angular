@@ -1,11 +1,116 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import * as chartData2 from '../../../shared/data/chart/chartjs'
+import * as chartData from '../../../shared/data/chart/apex';
+
+import {
+
+
+  ChartComponent,
+  ApexAxisChartSeries,
+  ApexChart,
+  ApexFill,
+  ApexYAxis,
+  ApexTooltip,
+  ApexMarkers,
+  ApexXAxis,
+  ApexPlotOptions,
+  ApexDataLabels,
+  ApexGrid,
+
+} from "ng-apexcharts";
+
+export type ChartOptions = {
+  series: ApexAxisChartSeries;
+  chart: ApexChart;
+  xaxis: ApexXAxis;
+  yaxis: ApexYAxis | ApexYAxis[];
+  dataLabels: ApexDataLabels;
+  stroke: any; // ApexStroke;
+  markers: ApexMarkers;
+  plotOptions: ApexPlotOptions;
+  fill: ApexFill;
+  tooltip: ApexTooltip;
+  grid: ApexGrid;
+
+};
 
 @Component({
   selector: 'app-state-waiver',
   templateUrl: './state-waiver.component.html',
   styleUrls: ['./state-waiver.component.scss']
 })
-export class StateWaiverComponent {
+export class StateWaiverComponent implements OnInit {
+
+  public isCollapsed1 = false;
+  public isClosed1 = false;
+  public isCollapsed2 = false;
+  public isClosed2 = false;
+
+  chartOptions: any;
+
+  constructor() {
+        this.chartOptions = {
+      series: [
+    {
+      name: "Operator Name",
+      type: "bar",
+      data: [23, 11, 22, 27, 13, 22, 37, 21, 44, 22, 30, 30]
+    },
+    {
+      name: "Line ID",
+      type: "area",
+      data: [44, 55, 41, 67, 22, 43, 21, 41, 56, 27, 43, 43]
+    },
+    {
+      name: "Description",
+      type: "line",
+      data: [30, 25, 36, 30, 45, 35, 64, 52, 59, 36, 39, 39]
+    }
+  ],
+  chart: {
+    height: 350,
+    type: "line",
+    left: "-57"
+  },
+  dataLabels: {
+    enabled: false
+  },
+  stroke: {
+    width: [0],
+    curve: "smooth"
+  },
+  plotOptions: {
+    bar: {
+      columnWidth: "15%"
+    }
+  },
+  yaxis: {
+    title: {
+      text: ""
+    },
+    min: 0
+  },
+  tooltip: {
+    shared: true,
+    intersect: false,
+    y: {
+      formatter: function (y: number) {
+        if (typeof y !== "undefined") {
+          return y?.toFixed(0) + " points";
+        }
+        return y;
+      }
+    }
+  },
+  grid: {
+    show: false
+  }
+
+
+
+    };
+  }
+
   stateWaivers = [
     {
       operatorName: 'AIMEE CAUGUIRAN',
@@ -79,88 +184,29 @@ export class StateWaiverComponent {
       applicationDate: '2023-08-12',
       expirationDate: '2024-08-12'
     },
-    {
-      operatorName: 'ENRIQUE JIMENEZ',
-      lineID: '77888',
-      description: 'Security enhancement waiver',
-      leadPSE: 'Ethan Martinez',
-      status: 'Active',
-      applicationDate: '2023-09-25',
-      expirationDate: '2024-09-25'
-    },
-    {
-      operatorName: 'HA NGUYEN',
-      lineID: '33444',
-      description: 'Pipeline pressure test waiver',
-      leadPSE: 'Sophia Adams',
-      status: 'Active',
-      applicationDate: '2023-11-07',
-      expirationDate: '2024-11-07'
-    },
-    {
-      operatorName: 'HOSSEIN MONFARED',
-      lineID: '66778',
-      description: 'Corrosion control waiver',
-      leadPSE: 'Alexander Moore',
-      status: 'In Review',
-      applicationDate: '2023-12-28',
-      expirationDate: '2024-12-28'
-    },
-    {
-      operatorName: 'JUSTIN HARER',
-      lineID: '99001',
-      description: 'Emergency response plan waiver',
-      leadPSE: 'Grace Robinson',
-      status: 'Active',
-      applicationDate: '2024-01-10',
-      expirationDate: '2025-01-10'
-    },
-    {
-      operatorName: 'MALEK ITANI',
-      lineID: '11221',
-      description: 'Valve maintenance waiver',
-      leadPSE: 'Liam Clark',
-      status: 'Active',
-      applicationDate: '2024-02-28',
-      expirationDate: '2025-02-28'
-    },
-    {
-      operatorName: 'MARK MCCALEB',
-      lineID: '22233',
-      description: 'Emergency shutdown system waiver',
-      leadPSE: 'Ava Lewis',
-      status: 'Expired',
-      applicationDate: '2024-03-14',
-      expirationDate: '2025-03-14'
-    },
-    {
-      operatorName: 'SAMPSON TANG',
-      lineID: '88844',
-      description: 'Leak detection system waiver',
-      leadPSE: 'Noah Wright',
-      status: 'Active',
-      applicationDate: '2024-04-05',
-      expirationDate: '2025-04-05'
-    },
-    {
-      operatorName: 'TUAN TRAN',
-      lineID: '12399',
-      description: 'Emergency shutdown valve waiver',
-      leadPSE: 'Aiden Hill',
-      status: 'Active',
-      applicationDate: '2024-05-20',
-      expirationDate: '2025-05-20'
-    },
-    {
-      operatorName: 'XUAN NGUYEN',
-      lineID: '55661',
-      description: 'Pipeline integrity assessment waiver',
-      leadPSE: 'Chloe Carter',
-      status: 'In Review',
-      applicationDate: '2024-06-30',
-      expirationDate: '2025-06-30'
-    }
+
+
   ];
 
+  ngOnInit(): void {
+  }
+  Collapsetoggle1() {
+    this.isCollapsed1 = !this.isCollapsed1;
+  }
+  Closetoggle1() {
+    this.isClosed1 = true
+  }
+  Collapsetoggle2() {
+    this.isCollapsed2 = !this.isCollapsed2;
+  }
+  Closetoggle2() {
+    this.isClosed2 = true
+  }
+
+  public apexData = chartData.ApexChartData;
+  public PieChartData = chartData2.PieChartData;
+  public PieChartOptions = chartData2.PieChartOptions;
+  public PieChartType = chartData2.PieChartType;
+    public barData = chartData.BarData;
 
 }

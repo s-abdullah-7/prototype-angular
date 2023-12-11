@@ -8,6 +8,7 @@ import { UserEditComponent } from './user-edit/user-edit.component';
 import { UserAddComponent } from './user-add/user-add.component';
 import { HydrostaticFirmsComponent } from './hydrostatic-firms/hydrostatic-firms.component';
 import { StateWaiverComponent } from './state-waiver/state-waiver.component';
+import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
 
 const routes: Routes = [
   {
@@ -23,6 +24,7 @@ const routes: Routes = [
       { path: 'user/edit/:id',title:"Edit User", component: UserEditComponent },
       { path: 'user/add',title:"Add User", component: UserAddComponent },
       { path: 'dashboard/state-waiver',title:"Add User", component: StateWaiverComponent },
+      { path: 'user/dashboard',title:"Add User", component: UserDashboardComponent },
 
     ]
   }

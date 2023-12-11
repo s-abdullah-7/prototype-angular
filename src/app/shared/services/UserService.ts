@@ -60,30 +60,6 @@ export class UserService {
       userCategory: "Internal",
       userRole: "Manager"
     },
-    {
-      id: 10,
-      name: "MALEK ITANI",
-      userCategory: "External",
-      userRole: "Engineer"
-    },
-    {
-      id: 11,
-      name: "MARK MCCALEB",
-      userCategory: "External",
-      userRole: "Analyst"
-    },
-    {
-      id: 12,
-      name: "SAMPSON TANG",
-      userCategory: "Internal",
-      userRole: "Supervisor"
-    },
-    {
-      id: 13,
-      name: "TUAN TRAN",
-      userCategory: "External",
-      userRole: "Inspector"
-    }
   ];
 
   constructor() { }

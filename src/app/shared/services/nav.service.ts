@@ -110,79 +110,80 @@ export class NavService implements OnDestroy {
 			title: 'Home', icon: 'home', active: true, badgeClass:'badge badge-sm bg-secondary badge-hide', badgeValue:'new', path: '/home/home', type: 'link'
     },
 		{
-			title: 'Program Status', icon: 'grid', type: 'sub', Menusub: true, active: false, children: [
-        { path: '/home/statistics', title: 'Statistics', type: 'link' },
-				{ path: '#', title: 'Trends', type: 'link' },
-				]
-
-		},
-    {
-			title: 'Pipeline Data', icon: 'shopping-bag', type: 'sub', Menusub: true, active: false, children: [
-        { path: '#', title: 'Operator Search', type: 'link' },
-        { path: '#', title: 'IU Search', type: 'link' },
-        { path: '#', title: 'Edit Date', type: 'link' },
-				]
-
-		},
-    {
-			title: 'Inspection', icon: 'grid', type: 'sub', Menusub: true, active: false, children: [
-        { path: '#', title: 'Assignments', type: 'link' },
-        { path: '#', title: 'Planning', type: 'link' },
-        { path: '#', title: 'Training/Qualifications', type: 'link' },
-        { path: '#', title: 'Deferrals', type: 'link' },
-        { path: '#', title: 'CBAT', type: 'link' },
-				]
-
-		},
-    {
-			title: 'Investigation', icon: 'grid', type: 'sub', Menusub: true, active: false, children: [
-        // { path: '#', title: 'Statistics', type: 'link' },
-				]
-
-		},
-    {
-			title: 'State Waiver', icon: 'grid', type: 'sub', Menusub: true, active: false, children: [
-        { path: '/dashboard/state-waiver', title: 'Overview', type: 'link' },
-				]
-
-		},
-    {
-			title: 'Mapping System', icon: 'grid', type: 'sub', Menusub: true, active: false, children: [
-        // { path: '#', title: 'Statistics', type: 'link' },
-				]
-
-		},
-    {
-			title: 'Integrity Management', icon: 'grid', type: 'sub', Menusub: true, active: false, children: [
-        // { path: '#', title: 'Statistics', type: 'link' },
-				]
-
-		},
-    {
-			title: 'Enforcement', icon: 'grid', type: 'sub', Menusub: true, active: false, children: [
-        // { path: '#', title: 'Statistics', type: 'link' },
-				]
-
-		},
-    {
-			title: 'Document Library', icon: 'grid', type: 'sub', Menusub: true, active: false, children: [
-        // { path: '#', title: 'Statistics', type: 'link' },
+			title: 'Dashboard', icon: 'grid', type: 'sub', Menusub: true, active: false, children: [
+        { path: '/home/statistics', title: 'Program Status', type: 'link' },
+				{ path: '#', title: 'Pipeline', type: 'link' },
+				{ path: '', title: 'Inspection', type: 'link' },
+				{ path: 'Investigation', title: 'Integrity Management', type: 'link' },
+				{ path: 'State Waiver', title: 'Investigation', type: 'link' },
+				{ path: '/dashboard/state-waiver', title: 'State Waiver', type: 'link' },
+				{ path: 'State Waiver', title: 'Enforcement', type: 'link' },
+				{ path: 'State Waiver', title: 'Pipeline Safety Information', type: 'link' },
 				]
 
 		},
 
+
     {
-			title: 'Calfire Portal', icon: 'grid', type: 'sub', Menusub: true, active: false, children: [
-        { path: '#', title: 'Annual Reporting', type: 'link' },
-        { path: '#', title: 'Integrity Testing', type: 'link' },
-        { path: '#', title: 'Hydrostatic Testing', type: 'link' },
+			title: 'Asset Search', icon: 'shield', type: 'sub', Menusub: true, active: false, children: [
+        { path: '#', title: '', type: 'link' },
+        { path: '#', title: '', type: 'link' },
+        { path: '#', title: '', type: 'link' },
+				]
+
+		},
+        {
+			title: 'Mapping System', icon: 'bar-chart', type: 'sub', Menusub: true, active: false, children: [
+        { path: '#', title: '', type: 'link' },
+        { path: '#', title: '', type: 'link' },
+        { path: '#', title: '', type: 'link' },
 				]
 
 		},
     {
-			title: 'Admin', icon: 'grid', type: 'sub', Menusub: true, active: false, children: [
-        { path: '/dashboard/admin', title: 'User Roles', type: 'link' },
-        { path: '/', title: 'Change Management', type: 'link' },
+			title: 'Document Library', icon: 'file', type: 'sub', Menusub: true, active: false, children: [
+        { path: '#', title: '', type: 'link' },
+        { path: '#', title: '', type: 'link' },
+        { path: '#', title: '', type: 'link' },
+				]
+
+		},
+        {
+			title: 'Portal', icon: 'layers', type: 'sub', Menusub: true, active: false, children: [
+        { path: '#', title: '', type: 'link' },
+        { path: '#', title: '', type: 'link' },
+        { path: '#', title: '', type: 'link' },
+				]
+
+		},
+    {
+			title: 'PIMS Links', icon: 'shopping-bag', type: 'sub', Menusub: true, active: false, children: [
+        { path: '#', title: '', type: 'link' },
+        { path: '#', title: '', type: 'link' },
+        { path: '#', title: '', type: 'link' },
+				]
+
+		},
+     {
+			title: 'Presentations', icon: 'grid', type: 'sub', Menusub: true, active: false, children: [
+        { path: '#', title: '', type: 'link' },
+        { path: '#', title: '', type: 'link' },
+        { path: '#', title: '', type: 'link' },
+				]
+
+		},
+     {
+			title: 'CAL FIRE Intranet', icon: 'grid', type: 'sub', Menusub: true, active: false, children: [
+        { path: '#', title: '', type: 'link' },
+        { path: '#', title: '', type: 'link' },
+        { path: '#', title: '', type: 'link' },
+				]
+
+		},
+    {
+			title: 'Admin', icon: 'database', type: 'sub', Menusub: true, active: false, children: [
+        { path: '/user/dashboard', title: 'Dashboard', type: 'link' },
+        { path: '/dashboard/admin', title: 'User Management', type: 'link' },
         { path: '#', title: 'Billing', type: 'link' },
 				]
 

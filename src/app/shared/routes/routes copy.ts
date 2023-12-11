@@ -12,10 +12,6 @@ export const content: Routes = [
   },
   {
     path: '',
-    loadChildren: () => import('../../components/Management/managment.module').then(m => m.ManagementModule)
-  },
-  {
-    path: '',
     loadChildren: () => import('../../components/Dashboards/dashboards.module').then(m => m.DashboardsModule)
   },
 ]

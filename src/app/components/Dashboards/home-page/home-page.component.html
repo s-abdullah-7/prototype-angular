@@ -4,10 +4,9 @@
   <div class="row">
     <div class="col-xl-8">
       <div class="row">
-        <div class="col-md-12 col-xl-4">
+        <div class="col-md-12 col-xl-3">
           <div class="card" [(ngbCollapse)]="isClosed1">
             <div class="card-header bg-primary br-tr-3 br-tl-3">
-              <i class="fa fa-bar-chart-o custom-icons"></i>
               <h3 class="card-title text-white ">Program Status</h3>
               <div class="card-options ">
                 <a href="javascript:void(0)" class="card-options-collapse" data-bs-toggle="card-collapse"
@@ -17,19 +16,19 @@
             </div>
             <div [(ngbCollapse)]="isCollapsed1">
               <div class="card-body">
-                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>Statistics</h5>
-                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>Trends</h5>
+                <h6 class="font-weight-normal mb-3">Statistics</h6>
+                <h6 class="font-weight-normal mb-3">Trends</h6>
               </div>
+              <div style="margin-bottom: 70px;"></div>
             </div>
           </div>
         </div><!-- COL END -->
 
 
 
-        <div class="col-md-12 col-xl-4">
+        <div class="col-md-12 col-xl-3">
           <div class="card" [(ngbCollapse)]="isClosed4">
             <div class="card-header bg-success br-tr-3 br-tl-3">
-              <i class="mdi mdi-account-search " style="padding-left: 14px; padding-right: 14px; color: white; font-size: 30px; "></i>
               <h3 class="card-title text-white">Investigation</h3>
               <div class="card-options ">
                 <a href="javascript:void(0)" class="card-options-collapse" data-bs-toggle="card-collapse"
@@ -39,18 +38,18 @@
             </div>
             <div [(ngbCollapse)]="isCollapsed4">
               <div class="card-body">
-                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>Spill Notification</h5>
-                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>Accident Records</h5>
-                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>Accident Investigation Data Request</h5>
+                <h6 class="font-weight-normal mb-3">Spill Notification</h6>
+                <h6 class="font-weight-normal mb-3">Accident Records</h6>
+                <h6 class="font-weight-normal mb-3">Accident Inv Data Req</h6>
               </div>
+              <div style="margin-bottom: 26px;"></div>
             </div>
           </div>
         </div><!-- COL END -->
 
-        <div class="col-md-12 col-xl-4">
+        <div class="col-md-12 col-xl-3">
           <div class="card" [(ngbCollapse)]="isClosed8">
             <div class="card-header bg-cyan br-tr-3 br-tl-3">
-              <i class="fa fa-paper-plane custom-icons"></i>
               <h3 class="card-title text-white">Enforcement</h3>
               <div class="card-options ">
                 <a href="javascript:void(0)" class="card-options-collapse" data-bs-toggle="card-collapse"
@@ -60,19 +59,19 @@
             </div>
             <div [(ngbCollapse)]="isCollapsed8">
               <div class="card-body">
-                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>Compliance Actions</h5>
-                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>Civil Penalty </h5>
-                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>Reports </h5>
+                <h6 class="font-weight-normal mb-3">Compliance Actions</h6>
+                <h6 class="font-weight-normal mb-3">Civil Penalty </h6>
+                <h6 class="font-weight-normal mb-3">Reports </h6>
               </div>
+              <div style="margin-bottom: 43px;"></div>
             </div>
           </div>
         </div><!-- COL END -->
 
 
-        <div class="col-md-12 col-xl-4">
+        <div class="col-md-12 col-xl-3">
           <div class="card" [(ngbCollapse)]="isClosed3">
             <div class="card-header bg-warning br-tr-3 br-tl-3">
-              <i class="fa fa-clipboard custom-icons"></i>
               <h3 class="card-title text-white">Inspection</h3>
               <div class="card-options ">
                 <a href="javascript:void(0)" class="card-options-collapse" data-bs-toggle="card-collapse"
@@ -82,11 +81,11 @@
             </div>
             <div [(ngbCollapse)]="isCollapsed3">
               <div class="card-body">
-                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>Assignments</h5>
-                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>Planning</h5>
-                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>Training</h5>
-                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>Deferrals</h5>
-                <h5 class="font-weight-normal mb-"><i class="fa fa-circle icon-padding"></i>CBAT</h5>
+                <h6 class="font-weight-normal mb-3">Assignments</h6>
+                <h6 class="font-weight-normal mb-3">Planning</h6>
+                <h6 class="font-weight-normal mb-3">Training</h6>
+                <h6 class="font-weight-normal mb-3">Deferrals</h6>
+                <h6 class="font-weight-normal mb-">CBAT</h6>
               </div>
             </div>
           </div>
@@ -94,11 +93,10 @@
 
 
 
-        <div class="col-md-12 col-xl-4">
+        <div class="col-md-12 col-xl-3">
           <div class="card" [(ngbCollapse)]="isClosed7">
             <div class="card-header bg-info br-tr-3 br-tl-3">
-              <i class="mdi mdi-account-check" style="padding-left: 14px; padding-right: 14px; color:white; font-size:25px;"></i>
-              <h3 class="card-title text-white">Integrity Management</h3>
+              <h6 class="card-title text-white">Integrity Management</h6>
               <div class="card-options ">
                 <a href="javascript:void(0)" class="card-options-collapse" data-bs-toggle="card-collapse"
                   (click)="Collapsetoggle7()" [attr.aria-expanded]="!isCollapsed7"><i
@@ -107,19 +105,18 @@
             </div>
             <div [(ngbCollapse)]="isCollapsed7">
               <div class="card-body">
-                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>Compliance Actions</h5>
-                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>Civil Penalty Management</h5>
-                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>Document Management</h5>
-                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>Reporting & Analytics</h5>
+                <h6 class="font-weight-normal mb-3">Compliance Actions</h6>
+                <h6 class="font-weight-normal mb-3">Civil Penalty Management</h6>
+                <h6 class="font-weight-normal mb-3">Document Management</h6>
+                <h6 class="font-weight-normal mb-3">Reporting & Analytics</h6>
               </div>
             </div>
           </div>
         </div><!-- COL END -->
 
-        <div class="col-md-12 col-xl-4">
+        <div class="col-md-12 col-xl-3">
           <div class="card" [(ngbCollapse)]="isClosed10">
             <div class="card-header bg-gray br-tr-3 br-tl-3">
-              <i class="fa fa-mail-reply custom-icons"></i>
               <h3 class="card-title text-white">Calfire Portal</h3>
               <div class="card-options ">
                 <a href="javascript:void(0)" class="card-options-collapse" data-bs-toggle="card-collapse"
@@ -129,21 +126,21 @@
             </div>
             <div [(ngbCollapse)]="isCollapsed10">
               <div class="card-body">
-                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>Annual Reporting</h5>
-                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>Integrity Testing</h5>
-                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>Hydrostatic Testing</h5>
-                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>Billing and Applications</h5>
+                <h6 class="font-weight-normal mb-3">Annual Reporting</h6>
+                <h6 class="font-weight-normal mb-3">Integrity Testing</h6>
+                <h6 class="font-weight-normal mb-3">Hydrostatic Testing</h6>
+                <h6 class="font-weight-normal mb-3">Billing and Applications</h6>
               </div>
+              <div style="margin-bottom: 15px;"></div>
             </div>
           </div>
         </div><!--Col End-->
 
 
 
-        <div class="col-md-12 col-xl-4">
+        <div class="col-md-12 col-xl-3">
           <div class="card" [(ngbCollapse)]="isClosed6">
             <div class="card-header bg-green br-tr-3 br-tl-3">
-              <i class="fa fa-map custom-icons"></i>
               <h3 class="card-title text-white">Mapping System</h3>
               <div class="card-options ">
                 <a href="javascript:void(0)" class="card-options-collapse" data-bs-toggle="card-collapse"
@@ -153,26 +150,20 @@
             </div>
             <div [(ngbCollapse)]="isCollapsed6">
               <div class="card-body">
-                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>Production Maps</h5>
-                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>GIS Dashboard Management</h5>
-                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>Map Applications</h5>
+                <h6 class="font-weight-normal mb-3">Production Maps</h6>
+                <h6 class="font-weight-normal mb-3">GIS Management</h6>
+                <h6 class="font-weight-normal mb-3">Map Applications</h6>
               </div>
+              <div style="margin-bottom: 58px;"></div>
             </div>
           </div>
         </div>
         <!-- COL END -->
 
 
-
-
-
-
-
-
-        <div class="col-md-12 col-xl-4">
+        <div class="col-md-12 col-xl-3">
           <div class="card" [(ngbCollapse)]="isClosed9">
             <div class="card-header bg-yellow br-tr-3 br-tl-3">
-              <i class="fa fa-folder custom-icons"></i>
               <h3 class="card-title text-white">Document Library</h3>
               <div class="card-options ">
                 <a href="javascript:void(0)" class="card-options-collapse" data-bs-toggle="card-collapse"
@@ -182,10 +173,11 @@
             </div>
             <div [(ngbCollapse)]="isCollapsed9">
               <div class="card-body">
-                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>File Storage</h5>
-                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>Data Relationships</h5>
-                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>Access Management</h5>
+                <h6 class="font-weight-normal mb-3">File Storage</h6>
+                <h6 class="font-weight-normal mb-3">Data Relationships</h6>
+                <h6 class="font-weight-normal mb-3">Access Management</h6>
               </div>
+              <div style="margin-bottom: 58px;"></div>
             </div>
           </div>
         </div><!--Col End-->
@@ -194,10 +186,9 @@
 
 
 
-        <div class="col-md-12 col-xl-4">
+        <div class="col-md-12 col-xl-3">
           <div class="card" [(ngbCollapse)]="isClosed2">
             <div class="card-header bg-secondary br-tr-3 br-tl-3">
-              <i class="fa fa-droplet custom-icons"></i>
               <h3 class="card-title text-white">Pipeline</h3>
               <div class="card-options ">
                 <a href="javascript:void(0)" class="card-options-collapse" data-bs-toggle="card-collapse"
@@ -207,9 +198,9 @@
             </div>
             <div [(ngbCollapse)]="isCollapsed2">
               <div class="card-body">
-                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>Operator Search</h5>
-                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>IU Search</h5>
-                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>Edit Date</h5>
+                <h6 class="font-weight-normal mb-3">Operator Search</h6>
+                <h6 class="font-weight-normal mb-3">IU Search</h6>
+                <h6 class="font-weight-normal mb-3">Edit Date</h6>
               </div>
             </div>
           </div>
@@ -217,10 +208,9 @@
 
 
 
-        <div class="col-md-12 col-xl-4">
+        <div class="col-md-12 col-xl-3">
           <div class="card" [(ngbCollapse)]="isClosed11">
             <div class="card-header bg-red br-tr-3 br-tl-3">
-              <i class="fa fa-user custom-icons"></i>
               <h3 class="card-title text-white">Admin</h3>
               <div class="card-options ">
                 <a href="javascript:void(0)" class="card-options-collapse" data-bs-toggle="card-collapse"
@@ -230,18 +220,17 @@
             </div>
             <div [(ngbCollapse)]="isCollapsed11">
               <div class="card-body">
-                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>User Roles</h5>
-                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>Change Management</h5>
-                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>Billing</h5>
+                <h6 class="font-weight-normal mb-3">User Roles</h6>
+                <h6 class="font-weight-normal mb-3">Change Management</h6>
+                <h6 class="font-weight-normal mb-3">Billing</h6>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="col-md-12 col-xl-4">
+        <div class="col-md-12 col-xl-3">
           <div class="card" [(ngbCollapse)]="isClosed5">
             <div class="card-header bg-gray br-tr-3 br-tl-3">
-              <i class="fa fa-paper-plane custom-icons"></i>
               <h3 class="card-title text-white">State Waiver</h3>
               <div class="card-options ">
                 <a href="javascript:void(0)" class="card-options-collapse" data-bs-toggle="card-collapse"
@@ -251,13 +240,10 @@
             </div>
             <div [(ngbCollapse)]="isCollapsed5">
               <div class="card-body">
-                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>Overview</h5>
-                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>Metrics</h5>
-                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>Data Requests</h5>
-                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>Compliance</h5>
-                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>Documents Repository</h5>
-                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>Notifications</h5>
-                <h5 class="font-weight-normal mb-3"><i class="fa fa-circle icon-padding"></i>Reporting</h5>
+                <h6 class="font-weight-normal mb-3">Overview</h6>
+                <h6 class="font-weight-normal mb-3">Data Requests</h6>
+                <h6 class="font-weight-normal mb-3">Compliance</h6>
+
               </div>
             </div>
           </div>
@@ -294,7 +280,7 @@
               </div>
             </li>
             <li>
-              <i class="task-icon bg-secondary"></i>
+              <i class="task-icon bg-primary"></i>
               <div class="d-flex">
                 <div class="">
                   <p class="mb-0"><span class="font-weight-500">New File</span> Uploaded to the project.</p>
@@ -305,7 +291,7 @@
               </div>
             </li>
             <li>
-              <i class="task-icon bg-danger"></i>
+              <i class="task-icon bg-primary"></i>
               <div class="d-flex">
                 <div class="">
                   <p class="mb-0"><span class="font-weight-500">Mary Perk</span> Found A New Bug.</p>
@@ -317,7 +303,7 @@
               </div>
             </li>
             <li>
-              <i class="task-icon bg-success"></i>
+              <i class="task-icon bg-primary"></i>
               <div class="d-flex">
                 <div class="">
                   <p class="mb-0"><span class="font-weight-500">New Member</span> Added To The Project.</p>
@@ -329,7 +315,7 @@
               </div>
             </li>
             <li>
-              <i class="task-icon bg-orange"></i>
+              <i class="task-icon bg-primary"></i>
               <div class="d-flex">
                 <div class="">
                   <p class="mb-0"><span class="font-weight-500">Task Completed</span> Successfully by Team</p>
@@ -341,7 +327,7 @@
               </div>
             </li>
             <li>
-              <i class="task-icon bg-cyan"></i>
+              <i class="task-icon bg-primary"></i>
               <div class="d-flex">
                 <div class="">
                   <p class="mb-0"><span class="font-weight-500">Task Assigned</span> to Project Team Leader.</p>
@@ -366,3 +352,6 @@
 
 
 
+
+
+<!--  -->
