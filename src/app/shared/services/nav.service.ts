@@ -149,29 +149,14 @@ export class NavService implements OnDestroy {
 
 		},
         {
-			title: 'Portal', icon: 'layers', type: 'sub', Menusub: true, active: false, children: [
+			title: 'PIMS Links', icon: 'file', type: 'sub', Menusub: true, active: false, children: [
         { path: '#', title: '', type: 'link' },
         { path: '#', title: '', type: 'link' },
         { path: '#', title: '', type: 'link' },
 				]
 
 		},
-    {
-			title: 'PIMS Links', icon: 'shopping-bag', type: 'sub', Menusub: true, active: false, children: [
-        { path: '#', title: '', type: 'link' },
-        { path: '#', title: '', type: 'link' },
-        { path: '#', title: '', type: 'link' },
-				]
 
-		},
-     {
-			title: 'Presentations', icon: 'grid', type: 'sub', Menusub: true, active: false, children: [
-        { path: '#', title: '', type: 'link' },
-        { path: '#', title: '', type: 'link' },
-        { path: '#', title: '', type: 'link' },
-				]
-
-		},
      {
 			title: 'CAL FIRE Intranet', icon: 'grid', type: 'sub', Menusub: true, active: false, children: [
         { path: '#', title: '', type: 'link' },

@@ -5,12 +5,12 @@
   <!-- <div class="app-sidebar__overlay" (click)="sidebarClose()"></div> -->
   <!-- Sidemenu -->
 
-  <div class="app-sidebar sticky" [ngClass]="{ 'fixed-header visible-title': scrolled }" style="margin-top: 20px;">
+  <div class="app-sidebar sticky" [ngClass]="{ 'fixed-header visible-title': scrolled }" >
 
-      <div class="main-sidebar-header active" >
+      <div class="main-sidebar-header active" style="padding-bottom: 130px;">
           <a class="desktop-logo logo-light active " routerLink="/dashboard">
             <img
-              src="./assets/images/brand/dummy.svg"
+              src="./assets/images/brand/OSFM-Banner.svg"
               class="main-logo"
               alt="Logo"
               style="height: 200px; width: 185px; overflow: hidden;position: absolute;top: -67.5px; right: 1px;left: 5px;"
@@ -18,12 +18,13 @@
             </a>
             <a class="desktop-logo logo-dark active " routerLink="/dashboard">
             <img
-              src="./assets/images/brand/dummy2.svg"
+              src="./assets/images/brand/OSFM-Banner.svg"
               class="main-logo"
-              style="height: 200px; width: 185px; overflow: hidden;position: absolute;top: -67.5px; right: 1px;left: 5px;"
+              style="height: 200px; width: 100px; overflow: hidden;position: absolute;top: -45px; right: 5px;left: 5px;"
 
               alt="Logo"
             />
+            <h3 style="font-weight: bolder; color: aliceblue; overflow: hidden;position: absolute; top: 105px; right: 5px; left: 50px;">PIMS v2.0.1</h3>
             </a>
             <a class="logo-icon mobile-logo icon-light active " routerLink="/dashboard">
             <img
@@ -38,11 +39,13 @@
           src="./assets/images/brand/OSFM-Banner.svg"
           alt="logo"
         />
+
            </a>
+
 
       </div>
 <ng-scrollbar>
-  <div class="main-sidemenu">
+  <div class="main-sidemenu" style="margin-top: 150px;">
     <!-- left-arrow -->
     <div class="slide-left disabled d-none" id="slide-left"><svg xmlns="http://www.w3.org/2000/svg" fill="#7b8191" width="24"
         height="24" viewBox="0 0 24 24">

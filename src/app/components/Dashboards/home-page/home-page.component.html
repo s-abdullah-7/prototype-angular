@@ -1,10 +1,55 @@
-<app-page-header title="Home"  active_item="Dashboards"></app-page-header>
+<div style="margin-top: 25px;"></div>
+<app-page-header title="Home"></app-page-header>
+
+<!-- <div class="row">
+<div class="col-lg-12">
+          <div class="card" [(ngbCollapse)]="isClosed7">
+           <div class="card-status bg-blue br-tr-7 br-tl-7"></div>
+            <div class="card-header border-bottom">
+              <h6 class="card-title ">Announcement</h6>
+              <div class="card-options ">
+                <a href="javascript:void(0)" class="card-options-collapse" data-bs-toggle="card-collapse"
+                  (click)="Collapsetoggle7()" [attr.aria-expanded]="!isCollapsed7"><i
+                    class="fe text-primary fe-chevron-{{ !isCollapsed7 ?  'up' : 'down'}}"></i></a>
+              </div>
+            </div>
+            <div [(ngbCollapse)]="isCollapsed7">
+            <div>
+                <ul class="list-group">
+                    <li class="list-group-item font-weight-500"><i class="fa fa-circle m-1" style="font-size: smaller;" aria-hidden="true"></i> <span class="badge bg-primary  me-1 my-1">01-12-2023</span>  The CAL FIRE – Office of the State Fire Marshal (OSFM) has regulatory authority over
+                      intrastate hazardous liquid pipeline operators in California.</li>
+                    <li class="list-group-item font-weight-500"><i class="fa fa-circle m-1" style="font-size: smaller;" aria-hidden="true"></i> <span class="badge bg-primary  me-1 my-1">05-12-2023</span>  The OSFM Pipeline Safety
+                        Program investigates pipeline releases and conducts various inspections on pipeline
+                            operators and their pipeline systems.</li>
+                </ul>
+            </div>
+            <div class="pagination-wrapper m-2 d-flex justify-content-end">
+              <nav aria-label="Page navigation">
+                <ul class="pagination mb-0">
+                  <li class="page-item">
+                    <a aria-label="Next" class="page-link" href="javascript:void(0)"><i class="fa fa-angle-left"></i></a>
+                  </li>
+                  <li class="page-item">
+                    <a aria-label="Next" class="page-link" href="javascript:void(0)"><i class="fa fa-angle-right"></i></a>
+                  </li>
+                </ul>
+              </nav>
+              </div>
+            </div>
+          </div>
+</div>
+
+
+</div> -->
+
+
+
 
 <!-- ROW OPEN -->
   <div class="row">
-    <div class="col-xl-8">
+    <div class="col-xl-4">
       <div class="row">
-        <div class="col-md-12 col-xl-3">
+        <div class="col-md-12 col-xl-6">
           <div class="card" [(ngbCollapse)]="isClosed1">
             <div class="card-header bg-primary br-tr-3 br-tl-3">
               <h3 class="card-title text-white ">Program Status</h3>
@@ -19,14 +64,14 @@
                 <h6 class="font-weight-normal mb-3">Statistics</h6>
                 <h6 class="font-weight-normal mb-3">Trends</h6>
               </div>
-              <div style="margin-bottom: 70px;"></div>
+              <div style="margin-bottom: 48px;"></div>
             </div>
           </div>
         </div><!-- COL END -->
 
 
 
-        <div class="col-md-12 col-xl-3">
+        <div class="col-md-12 col-xl-6">
           <div class="card" [(ngbCollapse)]="isClosed4">
             <div class="card-header bg-success br-tr-3 br-tl-3">
               <h3 class="card-title text-white">Investigation</h3>
@@ -36,18 +81,18 @@
                     class="fe text-white fe-chevron-{{ !isCollapsed4 ?  'up' : 'down'}}"></i></a>
               </div>
             </div>
-            <div [(ngbCollapse)]="isCollapsed4">
+            <div [(ngbCollapse)]="isCollapsed4" style="margin-bottom: -20px;">
               <div class="card-body">
                 <h6 class="font-weight-normal mb-3">Spill Notification</h6>
                 <h6 class="font-weight-normal mb-3">Accident Records</h6>
                 <h6 class="font-weight-normal mb-3">Accident Inv Data Req</h6>
               </div>
-              <div style="margin-bottom: 26px;"></div>
+              <div style="margin-bottom: 40px;"></div>
             </div>
           </div>
         </div><!-- COL END -->
 
-        <div class="col-md-12 col-xl-3">
+        <div class="col-md-12 col-xl-6">
           <div class="card" [(ngbCollapse)]="isClosed8">
             <div class="card-header bg-cyan br-tr-3 br-tl-3">
               <h3 class="card-title text-white">Enforcement</h3>
@@ -57,19 +102,62 @@
                     class="fe text-white fe-chevron-{{ !isCollapsed5 ?  'up' : 'down'}}"></i></a>
               </div>
             </div>
-            <div [(ngbCollapse)]="isCollapsed8">
+            <div [(ngbCollapse)]="isCollapsed8" style="margin-bottom: -20px;">
               <div class="card-body">
                 <h6 class="font-weight-normal mb-3">Compliance Actions</h6>
                 <h6 class="font-weight-normal mb-3">Civil Penalty </h6>
                 <h6 class="font-weight-normal mb-3">Reports </h6>
               </div>
-              <div style="margin-bottom: 43px;"></div>
             </div>
           </div>
         </div><!-- COL END -->
 
 
-        <div class="col-md-12 col-xl-3">
+        <div class="col-md-12 col-xl-6">
+          <div class="card" [(ngbCollapse)]="isClosed2">
+            <div class="card-header bg-secondary br-tr-3 br-tl-3">
+              <h3 class="card-title text-white">Pipeline</h3>
+              <div class="card-options ">
+                <a href="javascript:void(0)" class="card-options-collapse" data-bs-toggle="card-collapse"
+                  (click)="Collapsetoggle2()" [attr.aria-expanded]="!isCollapsed2"><i
+                    class="fe text-white fe-chevron-{{ !isCollapsed2 ?  'up' : 'down'}}"></i></a>
+              </div>
+            </div>
+            <div [(ngbCollapse)]="isCollapsed2" style="margin-bottom: -20px;">
+              <div class="card-body">
+                <h6 class="font-weight-normal mb-3">Operator Search</h6>
+                <h6 class="font-weight-normal mb-3">Unit Search</h6>
+                <h6 class="font-weight-normal mb-3">PLID Search</h6>
+              </div>
+            </div>
+          </div>
+        </div><!-- COL END -->
+
+                <div class="col-md-12 col-xl-6">
+          <div class="card" [(ngbCollapse)]="isClosed5">
+            <div class="card-header bg-gray br-tr-3 br-tl-3">
+              <h3 class="card-title text-white">State Waiver</h3>
+              <div class="card-options ">
+                <a href="javascript:void(0)" class="card-options-collapse" data-bs-toggle="card-collapse"
+                  (click)="Collapsetoggle5()" [attr.aria-expanded]="!isCollapsed5"><i
+                    class="fe text-white fe-chevron-{{ !isCollapsed5 ?  'up' : 'down'}}"></i></a>
+              </div>
+            </div>
+            <div [(ngbCollapse)]="isCollapsed5" style="margin-bottom: 48px;">
+              <div class="card-body">
+                <h6 class="font-weight-normal mb-3">Overview</h6>
+                <h6 class="font-weight-normal mb-3">Data Requests</h6>
+                <h6 class="font-weight-normal mb-3">Compliance</h6>
+
+              </div>
+            </div>
+          </div>
+        </div><!-- COL END -->
+
+
+
+
+        <div class="col-md-12 col-xl-6">
           <div class="card" [(ngbCollapse)]="isClosed3">
             <div class="card-header bg-warning br-tr-3 br-tl-3">
               <h3 class="card-title text-white">Inspection</h3>
@@ -79,7 +167,7 @@
                     class="fe text-white fe-chevron-{{ !isCollapsed3 ?  'up' : 'down'}}"></i></a>
               </div>
             </div>
-            <div [(ngbCollapse)]="isCollapsed3">
+            <div [(ngbCollapse)]="isCollapsed3" style="margin-bottom: 5px;">
               <div class="card-body">
                 <h6 class="font-weight-normal mb-3">Assignments</h6>
                 <h6 class="font-weight-normal mb-3">Planning</h6>
@@ -93,7 +181,7 @@
 
 
 
-        <div class="col-md-12 col-xl-3">
+        <div class="col-md-12 col-xl-6">
           <div class="card" [(ngbCollapse)]="isClosed7">
             <div class="card-header bg-info br-tr-3 br-tl-3">
               <h6 class="card-title text-white">Integrity Management</h6>
@@ -103,7 +191,7 @@
                     class="fe text-white fe-chevron-{{ !isCollapsed7 ?  'up' : 'down'}}"></i></a>
               </div>
             </div>
-            <div [(ngbCollapse)]="isCollapsed7">
+            <div [(ngbCollapse)]="isCollapsed7" style="margin-bottom: -10px;">
               <div class="card-body">
                 <h6 class="font-weight-normal mb-3">Compliance Actions</h6>
                 <h6 class="font-weight-normal mb-3">Civil Penalty Management</h6>
@@ -114,7 +202,7 @@
           </div>
         </div><!-- COL END -->
 
-        <div class="col-md-12 col-xl-3">
+        <div class="col-md-12 col-xl-6">
           <div class="card" [(ngbCollapse)]="isClosed10">
             <div class="card-header bg-gray br-tr-3 br-tl-3">
               <h3 class="card-title text-white">Calfire Portal</h3>
@@ -124,7 +212,7 @@
                     class="fe text-white fe-chevron-{{ !isCollapsed10 ?  'up' : 'down'}}"></i></a>
               </div>
             </div>
-            <div [(ngbCollapse)]="isCollapsed10">
+            <div [(ngbCollapse)]="isCollapsed10" style="margin-bottom: -10px;">
               <div class="card-body">
                 <h6 class="font-weight-normal mb-3">Annual Reporting</h6>
                 <h6 class="font-weight-normal mb-3">Integrity Testing</h6>
@@ -138,116 +226,16 @@
 
 
 
-        <div class="col-md-12 col-xl-3">
-          <div class="card" [(ngbCollapse)]="isClosed6">
-            <div class="card-header bg-green br-tr-3 br-tl-3">
-              <h3 class="card-title text-white">Mapping System</h3>
-              <div class="card-options ">
-                <a href="javascript:void(0)" class="card-options-collapse" data-bs-toggle="card-collapse"
-                  (click)="Collapsetoggle6()" [attr.aria-expanded]="!isCollapsed6"><i
-                    class="fe text-white fe-chevron-{{ !isCollapsed6 ?  'up' : 'down'}}"></i></a>
-              </div>
-            </div>
-            <div [(ngbCollapse)]="isCollapsed6">
-              <div class="card-body">
-                <h6 class="font-weight-normal mb-3">Production Maps</h6>
-                <h6 class="font-weight-normal mb-3">GIS Management</h6>
-                <h6 class="font-weight-normal mb-3">Map Applications</h6>
-              </div>
-              <div style="margin-bottom: 58px;"></div>
-            </div>
-          </div>
-        </div>
-        <!-- COL END -->
-
-
-        <div class="col-md-12 col-xl-3">
-          <div class="card" [(ngbCollapse)]="isClosed9">
-            <div class="card-header bg-yellow br-tr-3 br-tl-3">
-              <h3 class="card-title text-white">Document Library</h3>
-              <div class="card-options ">
-                <a href="javascript:void(0)" class="card-options-collapse" data-bs-toggle="card-collapse"
-                  (click)="Collapsetoggle9()" [attr.aria-expanded]="!isCollapsed9"><i
-                    class="fe text-white fe-chevron-{{ !isCollapsed9 ?  'up' : 'down'}}"></i></a>
-              </div>
-            </div>
-            <div [(ngbCollapse)]="isCollapsed9">
-              <div class="card-body">
-                <h6 class="font-weight-normal mb-3">File Storage</h6>
-                <h6 class="font-weight-normal mb-3">Data Relationships</h6>
-                <h6 class="font-weight-normal mb-3">Access Management</h6>
-              </div>
-              <div style="margin-bottom: 58px;"></div>
-            </div>
-          </div>
-        </div><!--Col End-->
 
 
 
 
 
-        <div class="col-md-12 col-xl-3">
-          <div class="card" [(ngbCollapse)]="isClosed2">
-            <div class="card-header bg-secondary br-tr-3 br-tl-3">
-              <h3 class="card-title text-white">Pipeline</h3>
-              <div class="card-options ">
-                <a href="javascript:void(0)" class="card-options-collapse" data-bs-toggle="card-collapse"
-                  (click)="Collapsetoggle2()" [attr.aria-expanded]="!isCollapsed2"><i
-                    class="fe text-white fe-chevron-{{ !isCollapsed2 ?  'up' : 'down'}}"></i></a>
-              </div>
-            </div>
-            <div [(ngbCollapse)]="isCollapsed2">
-              <div class="card-body">
-                <h6 class="font-weight-normal mb-3">Operator Search</h6>
-                <h6 class="font-weight-normal mb-3">IU Search</h6>
-                <h6 class="font-weight-normal mb-3">Edit Date</h6>
-              </div>
-            </div>
-          </div>
-        </div><!-- COL END -->
 
 
 
-        <div class="col-md-12 col-xl-3">
-          <div class="card" [(ngbCollapse)]="isClosed11">
-            <div class="card-header bg-red br-tr-3 br-tl-3">
-              <h3 class="card-title text-white">Admin</h3>
-              <div class="card-options ">
-                <a href="javascript:void(0)" class="card-options-collapse" data-bs-toggle="card-collapse"
-                  (click)="Collapsetoggle11()" [attr.aria-expanded]="!isCollapsed11"><i
-                    class="fe text-white fe-chevron-{{ !isCollapsed11 ?  'up' : 'down'}}"></i></a>
-              </div>
-            </div>
-            <div [(ngbCollapse)]="isCollapsed11">
-              <div class="card-body">
-                <h6 class="font-weight-normal mb-3">User Roles</h6>
-                <h6 class="font-weight-normal mb-3">Change Management</h6>
-                <h6 class="font-weight-normal mb-3">Billing</h6>
-              </div>
-            </div>
-          </div>
-        </div>
 
-        <div class="col-md-12 col-xl-3">
-          <div class="card" [(ngbCollapse)]="isClosed5">
-            <div class="card-header bg-gray br-tr-3 br-tl-3">
-              <h3 class="card-title text-white">State Waiver</h3>
-              <div class="card-options ">
-                <a href="javascript:void(0)" class="card-options-collapse" data-bs-toggle="card-collapse"
-                  (click)="Collapsetoggle5()" [attr.aria-expanded]="!isCollapsed5"><i
-                    class="fe text-white fe-chevron-{{ !isCollapsed5 ?  'up' : 'down'}}"></i></a>
-              </div>
-            </div>
-            <div [(ngbCollapse)]="isCollapsed5">
-              <div class="card-body">
-                <h6 class="font-weight-normal mb-3">Overview</h6>
-                <h6 class="font-weight-normal mb-3">Data Requests</h6>
-                <h6 class="font-weight-normal mb-3">Compliance</h6>
 
-              </div>
-            </div>
-          </div>
-        </div><!-- COL END -->
 
 
       </div>
@@ -257,25 +245,17 @@
     </div>
 
     <!--COL END-->
-
-
-
-    <div class="col-xl-4 col-md-12" >
-      <div class="card overflow-hidden">
-        <div class="card-header">
-          <div class="card-title mb-0">Activity Log</div>
-        </div>
-        <div class="card-body" style="padding-bottom: 57.5px;">
+  <!-- <div class="col-xl-4  col-md-12">
+        <ngb-accordion #acc="ngbAccordion" >
+          <ngb-panel id="panel1" class="active" title="Assignment Log" cardClass="acc-card mb-2 br-5">
+            <ng-template ngbPanelContent>
           <ul class="task-list">
             <li>
               <i class="task-icon bg-primary"></i>
               <div class="d-flex">
                 <div class="">
-                  <p class="mb-0"><span class="font-weight-500">New Task</span> added to the project.</p>
-                  <small class="text-muted">Just now</small>
-                </div>
-                <div class="ms-auto float-end">
-                  <a href="javascript:void(0)" class="btn btn-primary-light btn-sm">View</a>
+                  <p class="mb-0"><span class="font-weight-500">Complaine action</span> are Overdue by 2 days.</p>
+                  <small class="text-muted">05 Feb 2023</small>
                 </div>
               </div>
             </li>
@@ -283,10 +263,8 @@
               <i class="task-icon bg-primary"></i>
               <div class="d-flex">
                 <div class="">
-                  <p class="mb-0"><span class="font-weight-500">New File</span> Uploaded to the project.</p>
-                  <small class="text-muted">09:20 AM</small>
-                </div><div class="ms-auto float-end">
-                  <a href="javascript:void(0)" class="btn btn-primary-light btn-sm">View</a>
+                  <p class="mb-0"><span class="font-weight-500">Civil Penalty</span> is Pending by 1 day.</p>
+                  <small class="text-muted">25 Feb 2023</small>
                 </div>
               </div>
             </li>
@@ -294,11 +272,8 @@
               <i class="task-icon bg-primary"></i>
               <div class="d-flex">
                 <div class="">
-                  <p class="mb-0"><span class="font-weight-500">Mary Perk</span> Found A New Bug.</p>
-                  <small class="text-muted">05 Mar 2022</small>
-                </div>
-                <div class="ms-auto float-end">
-                  <a href="javascript:void(0)" class="btn btn-primary-light btn-sm">View</a>
+                  <p class="mb-0"><span class="font-weight-500">Integrity Testing</span> are in Due by 5 days.</p>
+                  <small class="text-muted">05 Mar 2023</small>
                 </div>
               </div>
             </li>
@@ -306,11 +281,49 @@
               <i class="task-icon bg-primary"></i>
               <div class="d-flex">
                 <div class="">
-                  <p class="mb-0"><span class="font-weight-500">New Member</span> Added To The Project.</p>
-                  <small class="text-muted">10 Mar 2022</small>
+                  <p class="mb-0"><span class="font-weight-500">Reports are</span> Pending by 6 days.</p>
+                  <small class="text-muted">15 April 2023</small>
                 </div>
-                <div class="ms-auto float-end">
-                  <a href="javascript:void(0)" class="btn btn-primary-light btn-sm">View</a>
+
+              </div>
+            </li>
+            <li>
+              <i class="task-icon bg-primary"></i>
+              <div class="d-flex">
+                <div class="">
+                  <p class="mb-0"><span class="font-weight-500">Accident Records </span>are Overdue by 2 Days.</p>
+                  <small class="text-muted">15 May 2023</small>
+                </div>
+              </div>
+            </li>
+            </ul>
+            </ng-template>
+          </ngb-panel>
+        </ngb-accordion>
+  </div> -->
+
+
+
+<div class="col-xl-4">
+          <div class="card" [(ngbCollapse)]="isClosed20">
+           <div class="card-status bg-blue br-tr-7 br-tl-7"></div>
+            <div class="card-header border-bottom">
+              <h6 class="card-title ">Activity Tab</h6>
+              <div class="card-options ">
+                <a href="javascript:void(0)" class="card-options-collapse" data-bs-toggle="card-collapse"
+                  (click)="Collapsetoggle20()" [attr.aria-expanded]="!isCollapsed20"><i
+                    class="fe text-primary fe-chevron-{{ !isCollapsed20 ?  'up' : 'down'}}"></i></a>
+              </div>
+            </div>
+            <div [(ngbCollapse)]="isCollapsed20">
+            <div class="m-4">
+                      <ul class="task-list">
+            <li>
+              <i class="task-icon bg-primary"></i>
+              <div class="d-flex">
+                <div class="">
+                  <p class="mb-0"><span class="font-weight-500">Complaine action</span> are Overdue by 2 days.</p>
+                  <small class="text-muted">05 Feb 2023</small>
                 </div>
               </div>
             </li>
@@ -318,11 +331,8 @@
               <i class="task-icon bg-primary"></i>
               <div class="d-flex">
                 <div class="">
-                  <p class="mb-0"><span class="font-weight-500">Task Completed</span> Successfully by Team</p>
-                  <small class="text-muted">20 Apr 2022</small>
-                </div>
-                <div class="ms-auto float-end">
-                  <a href="javascript:void(0)" class="btn btn-primary-light btn-sm">View</a>
+                  <p class="mb-0"><span class="font-weight-500">Civil Penalty</span> is Pending by 1 day.</p>
+                  <small class="text-muted">25 Feb 2023</small>
                 </div>
               </div>
             </li>
@@ -330,18 +340,224 @@
               <i class="task-icon bg-primary"></i>
               <div class="d-flex">
                 <div class="">
-                  <p class="mb-0"><span class="font-weight-500">Task Assigned</span> to Project Team Leader.</p>
-                  <small class="text-muted">27 Apr 2022</small>
-                </div>
-                <div class="ms-auto float-end">
-                  <a href="javascript:void(0)" class="btn btn-primary-light btn-sm">View</a>
+                  <p class="mb-0"><span class="font-weight-500">Integrity Testing</span> are in Due by 5 days.</p>
+                  <small class="text-muted">05 Mar 2023</small>
                 </div>
               </div>
             </li>
-          </ul>
-        </div>
-      </div>
-    </div>
+            <li>
+              <i class="task-icon bg-primary"></i>
+              <div class="d-flex">
+                <div class="">
+                  <p class="mb-0"><span class="font-weight-500">Reports are</span> Pending by 6 days.</p>
+                  <small class="text-muted">15 April 2023</small>
+                </div>
+
+              </div>
+            </li>
+            <li>
+              <i class="task-icon bg-primary"></i>
+              <div class="d-flex">
+                <div class="">
+                  <p class="mb-0"><span class="font-weight-500">Accident Records </span>are Overdue by 2 Days.</p>
+                  <small class="text-muted">15 May 2023</small>
+                </div>
+              </div>
+            </li>
+            </ul>
+
+</div>
+
+            </div>
+          </div>
+</div>
+
+
+
+
+
+
+
+<div class="col-xl-4">
+          <div class="card" [(ngbCollapse)]="isClosed20">
+           <div class="card-status bg-green br-tr-7 br-tl-7"></div>
+            <div class="card-header border-bottom">
+              <h6 class="card-title ">Announcement</h6>
+              <div class="card-options ">
+                <a href="javascript:void(0)" class="card-options-collapse" data-bs-toggle="card-collapse"
+                  (click)="Collapsetoggle20()" [attr.aria-expanded]="!isCollapsed20"><i
+                    class="fe text-primary fe-chevron-{{ !isCollapsed20 ?  'up' : 'down'}}"></i></a>
+              </div>
+            </div>
+            <div [(ngbCollapse)]="isCollapsed20">
+            <div>
+                <ul class="list-group">
+                                        <li class="list-group-item font-weight-500"><i class="fa fa-circle m-1" style="font-size: smaller;" aria-hidden="true"></i> <span class="badge bg-primary  me-1 my-1">01-12-2023</span>  The CAL FIRE – Office of the State Fire Marshal (OSFM) has regulatory authority over
+                                           intrastate hazardous liquid pipeline operators in California.</li>
+                                      <li class="list-group-item font-weight-500"><i class="fa fa-circle m-1" style="font-size: smaller;" aria-hidden="true"></i> <span class="badge bg-primary  me-1 my-1">05-12-2023</span>  The OSFM Pipeline Safety
+                                            Program investigates pipeline releases.</li>
+                                      <li class="list-group-item font-weight-500"><i class="fa fa-circle m-1" style="font-size: smaller;" aria-hidden="true"></i> <span class="badge bg-primary  me-1 my-1">05-12-2023</span>  A Pipeline accident at Refugio Beach in Santa Barbara County spilled over
+                                        100,000 gallons of crude oil and impacted over 25 miles of coastline and ocean water.</li>
+                                      <li class="list-group-item font-weight-500 mt-3" ><i class="fa fa-circle m-1" style="font-size: smaller;" aria-hidden="true"></i> <span class="badge bg-primary  me-1 my-1">21-05-2021</span> A ransomware attack on a pipeline operator</li>
+
+                </ul>
+            </div>
+            <div class="pagination-wrapper m-2 d-flex justify-content-end">
+              <nav aria-label="Page navigation">
+                <ul class="pagination mb-0">
+                  <li class="page-item">
+                    <a aria-label="Next" class="page-link" href="javascript:void(0)"><i class="fa fa-angle-left"></i></a>
+                  </li>
+                  <li class="page-item">
+                    <a aria-label="Next" class="page-link" href="javascript:void(0)"><i class="fa fa-angle-right"></i></a>
+                  </li>
+                </ul>
+              </nav>
+              </div>
+            </div>
+          </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- <div class="col-xl-4  col-md-12">
+      <div class="card">
+        <div class="card-body" style="margin-top: -20px; margin-bottom: -25px;">
+              <div class="wideget-user-tab">
+                  <div class="tab-menu-heading">
+                      <div class="tabs-menu1">
+                          <ul ngbNav #nav="ngbNav" [activeId]="1">
+
+
+                              <li [ngbNavItem]="1">
+                                <a ngbNavLink>Announcement</a>
+                                <ng-template ngbNavContent>
+
+                                  <div class="tab-pane active show" id="tab-51">
+                                    <div id="profile-log-switch">
+                                      <ul class="list-group">
+                                        <li class="list-group-item font-weight-500"><i class="fa fa-circle m-1" style="font-size: smaller;" aria-hidden="true"></i> <span class="badge bg-primary  me-1 my-1">01-12-2023</span>  The CAL FIRE – Office of the State Fire Marshal (OSFM) has regulatory authority over
+                                           intrastate hazardous liquid pipeline operators in California.</li>
+                                      <li class="list-group-item font-weight-500"><i class="fa fa-circle m-1" style="font-size: smaller;" aria-hidden="true"></i> <span class="badge bg-primary  me-1 my-1">05-12-2023</span>  The OSFM Pipeline Safety
+                                            Program investigates pipeline releases.</li>
+                                      <li class="list-group-item font-weight-500"><i class="fa fa-circle m-1" style="font-size: smaller;" aria-hidden="true"></i> <span class="badge bg-primary  me-1 my-1">05-12-2023</span>  A Pipeline accident at Refugio Beach in Santa Barbara County spilled over
+                                        100,000 gallons of crude oil and impacted over 25 miles of coastline and ocean water.</li>
+                                      <li class="list-group-item font-weight-500 mt-3" ><i class="fa fa-circle m-1" style="font-size: smaller;" aria-hidden="true"></i> <span class="badge bg-primary  me-1 my-1">21-05-2021</span> A ransomware attack on a pipeline operator</li>
+
+                                      </ul>
+              <div class="pagination-wrapper m-2 d-flex justify-content-end">
+              <nav aria-label="Page navigation">
+                <ul class="pagination mb-0">
+                  <li class="page-item">
+                    <a aria-label="Next" class="page-link" href="javascript:void(0)"><i class="fa fa-angle-left"></i></a>
+                  </li>
+                  <li class="page-item">
+                    <a aria-label="Next" class="page-link" href="javascript:void(0)"><i class="fa fa-angle-right"></i></a>
+                  </li>
+                </ul>
+              </nav>
+
+                                  </div>
+                                  </div>
+                                  </div>
+                                </ng-template>
+                              </li>
+
+
+                           <li [ngbNavItem]="2">
+                                <a ngbNavLink>Assignment Tab</a>
+                                <ng-template ngbNavContent>
+                                  <div class="card">
+                                    <div class="card-body">
+                                  <div class="tab-pane active show" id="tab-51">
+            <ul class="task-list" style="margin-top: -15px; margin-bottom: -20px;" >
+            <li>
+              <i class="task-icon bg-primary"></i>
+              <div class="d-flex">
+                <div class="">
+                  <p class="mb-0"><span class="font-weight-500">Complaine action</span> are Overdue by 2 days.</p>
+                  <small class="text-muted">05 Feb 2023</small>
+                </div>
+              </div>
+            </li>
+            <li>
+              <i class="task-icon bg-primary"></i>
+              <div class="d-flex">
+                <div class="">
+                  <p class="mb-0"><span class="font-weight-500">Civil Penalty</span> is Pending by 1 day.</p>
+                  <small class="text-muted">25 Feb 2023</small>
+                </div>
+              </div>
+            </li>
+            <li>
+              <i class="task-icon bg-primary"></i>
+              <div class="d-flex">
+                <div class="">
+                  <p class="mb-0"><span class="font-weight-500">Integrity Testing</span> are in Due by 5 days.</p>
+                  <small class="text-muted">05 Mar 2023</small>
+                </div>
+              </div>
+            </li>
+            <li>
+              <i class="task-icon bg-primary"></i>
+              <div class="d-flex">
+                <div class="">
+                  <p class="mb-0"><span class="font-weight-500">Reports are</span> Pending by 6 days.</p>
+                  <small class="text-muted">15 April 2023</small>
+                </div>
+
+              </div>
+            </li>
+            <li>
+              <i class="task-icon bg-primary"></i>
+              <div class="d-flex">
+                <div class="">
+                  <p class="mb-0"><span class="font-weight-500">Accident Records </span>are Overdue by 2 Days.</p>
+                  <small class="text-muted">15 May 2023</small>
+                </div>
+              </div>
+            </li>
+            </ul>
+                                  </div>
+                                  </div>
+                                  </div>
+                                </ng-template>
+                              </li>
+
+
+
+
+
+                            </ul>
+
+                      </div>
+                  </div>
+              </div>
+          </div>
+      <div [ngbNavOutlet]="nav"></div>
+
+  </div>
+  <! </div> -->
+
+
+
+
+
+
+
+
 
   </div>
 
@@ -353,5 +569,73 @@
 
 
 
-
 <!--  -->
+
+<!-- ROW-1 OPEN -->
+<!-- <div class="row" id="user-profile">
+  <div class="col-xl-4  col-md-12">
+        <ngb-accordion #acc="ngbAccordion" >
+          <ngb-panel id="panel1" class="active" title="Assignment Log" cardClass="acc-card mb-2 br-5">
+            <ng-template ngbPanelContent>
+          <ul class="task-list">
+            <li>
+              <i class="task-icon bg-primary"></i>
+              <div class="d-flex">
+                <div class="">
+                  <p class="mb-0"><span class="font-weight-500">Complaine action</span> are Overdue by 2 days.</p>
+                  <small class="text-muted">05 Feb 2023</small>
+                </div>
+              </div>
+            </li>
+            <li>
+              <i class="task-icon bg-primary"></i>
+              <div class="d-flex">
+                <div class="">
+                  <p class="mb-0"><span class="font-weight-500">Civil Penalty</span> is Pending by 1 day.</p>
+                  <small class="text-muted">25 Feb 2023</small>
+                </div>
+              </div>
+            </li>
+            <li>
+              <i class="task-icon bg-primary"></i>
+              <div class="d-flex">
+                <div class="">
+                  <p class="mb-0"><span class="font-weight-500">Integrity Testing</span> are in Due by 5 days.</p>
+                  <small class="text-muted">05 Mar 2023</small>
+                </div>
+              </div>
+            </li>
+            <li>
+              <i class="task-icon bg-primary"></i>
+              <div class="d-flex">
+                <div class="">
+                  <p class="mb-0"><span class="font-weight-500">Reports are</span> Pending by 6 days.</p>
+                  <small class="text-muted">15 April 2023</small>
+                </div>
+
+              </div>
+            </li>
+            <li>
+              <i class="task-icon bg-primary"></i>
+              <div class="d-flex">
+                <div class="">
+                  <p class="mb-0"><span class="font-weight-500">Accident Records </span>are Overdue by 2 Days.</p>
+                  <small class="text-muted">15 May 2023</small>
+                </div>
+              </div>
+            </li>
+            </ul>
+            </ng-template>
+          </ngb-panel>
+        </ngb-accordion>
+  </div>
+
+
+ </div> -->
+
+
+
+<!-- ROW-1 CLOSED -->
+
+
+

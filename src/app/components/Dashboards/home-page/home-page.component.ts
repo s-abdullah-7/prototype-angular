@@ -1,11 +1,20 @@
-import { Component , OnInit } from '@angular/core';
+import { Component , OnInit , AfterViewInit ,ViewChild } from '@angular/core';
+import { NgbAccordion } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-home-page',
   templateUrl: './home-page.component.html',
   styleUrls: ['./home-page.component.scss']
 })
-export class HomePageComponent implements OnInit {
+export class HomePageComponent implements AfterViewInit {
+  @ViewChild('acc') acc: NgbAccordion;
+
+  ngAfterViewInit() {
+    setTimeout(() => {
+      this.acc.collapseAll();
+      this.acc.expand('panel1');
+    });
+  }
 
 
 
@@ -13,6 +22,9 @@ export class HomePageComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  public isCollapsed20 = false;
+  public isClosed20 = false;
 
   public isCollapsed1 = false;
   public isClosed1 = false;
@@ -134,8 +146,17 @@ export class HomePageComponent implements OnInit {
     this.isCollapsed11 = !this.isCollapsed11;
   }
 
+  Collapsetoggle20() {
+    this.isCollapsed20 = !this.isCollapsed20;
+  }
+
+
   Closetoggle11() {
     this.isClosed11 = true;
+  }
+
+    Closetoggle20() {
+    this.isClosed20 = true;
   }
 
 
