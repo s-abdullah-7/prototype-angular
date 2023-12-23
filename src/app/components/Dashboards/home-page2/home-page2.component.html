@@ -3,10 +3,10 @@
 
 
 <!-- ROW OPEN -->
-<div class="row mb-0" >
-    <div class="col-lg-4">
-      <div class="row mb-0">
-        <div class="col-md-12 col-lg-6">
+  <div class="row mb-0" >
+    <div class="col-lg-8">
+    <div class="row mb-0">
+        <div class="col-md-12 col-lg-3">
           <div class="card" [(ngbCollapse)]="isClosed1">
             <div class="card-header bg-primary br-tr-3 br-tl-3">
               <h3 class="card-title text-white ">Program Status</h3>
@@ -21,14 +21,14 @@
                 <h6 class="font-weight-normal mb-3">Statistics</h6>
                 <h6 class="font-weight-normal mb-3">Trends</h6>
               </div>
-              <div style="margin-bottom: 73px;"></div>
+              <!-- <div style="margin-bottom: 73px;"></div> -->
             </div>
           </div>
         </div><!-- COL END -->
 
 
 
-        <div class="col-md-12 col-lg-6">
+        <div class="col-md-12 col-lg-3">
           <div class="card" [(ngbCollapse)]="isClosed4">
             <div class="card-header bg-success br-tr-3 br-tl-3">
               <h3 class="card-title text-white">Investigation</h3>
@@ -42,14 +42,14 @@
               <div class="card-body">
                 <h6 class="font-weight-normal mb-3">Spill Notification</h6>
                 <h6 class="font-weight-normal mb-3">Accident Records</h6>
-                <h6 class="font-weight-normal mb-3">Accident Inv Data Req</h6>
+                <h6 class="font-weight-normal mb-3">Accident Inv Data</h6>
               </div>
-              <div style="margin-bottom: 65px;"></div>
+              <!-- <div style="margin-bottom: 50px;"></div> -->
             </div>
           </div>
         </div><!-- COL END -->
 
-        <div class="col-md-12 col-lg-6">
+        <div class="col-md-12 col-lg-3">
           <div class="card" [(ngbCollapse)]="isClosed8">
             <div class="card-header bg-cyan br-tr-3 br-tl-3">
               <h3 class="card-title text-white">Enforcement</h3>
@@ -70,7 +70,7 @@
         </div><!-- COL END -->
 
 
-        <div class="col-md-12 col-lg-6">
+        <div class="col-md-12 col-lg-3">
           <div class="card" [(ngbCollapse)]="isClosed2">
             <div class="card-header bg-secondary br-tr-3 br-tl-3">
               <h3 class="card-title text-white">Pipeline</h3>
@@ -90,7 +90,7 @@
           </div>
         </div><!-- COL END -->
 
-        <div class="col-md-12 col-lg-6">
+                <div class="col-md-12 col-lg-3">
           <div class="card" [(ngbCollapse)]="isClosed5">
             <div class="card-header bg-gray br-tr-3 br-tl-3">
               <h3 class="card-title text-white">State Waiver</h3>
@@ -114,7 +114,7 @@
 
 
 
-        <div class="col-md-12 col-lg-6">
+        <div class="col-md-12 col-lg-3">
           <div class="card" [(ngbCollapse)]="isClosed3">
             <div class="card-header bg-warning br-tr-3 br-tl-3">
               <h3 class="card-title text-white">Inspection</h3>
@@ -138,13 +138,13 @@
 
 
 
-        <div class="col-md-12 col-lg-6">
+        <div class="col-md-12 col-lg-3">
           <div class="card" [(ngbCollapse)]="isClosed7">
             <div class="card-header bg-info br-tr-3 br-tl-3">
               <h6 class="card-title text-white">Integrity Management</h6>
               <div class="card-options ">
                 <a href="javascript:void(0)" class="card-options-collapse" data-bs-toggle="card-collapse"
-                  (click)="Collapsetoggle7()"><i
+                  (click)="Collapsetoggle7()" [attr.aria-expanded]="!isCollapsed7"><i
                     class="fe text-white fe-chevron-{{ !isCollapsed7 ?  'up' : 'down'}}"></i></a>
               </div>
             </div>
@@ -159,7 +159,7 @@
           </div>
         </div><!-- COL END -->
 
-        <div class="col-md-12 col-lg-6">
+        <div class="col-md-12 col-lg-3">
           <div class="card" [(ngbCollapse)]="isClosed10">
             <div class="card-header bg-gray br-tr-3 br-tl-3">
               <h3 class="card-title text-white">Calfire Portal</h3>
@@ -180,31 +180,63 @@
             </div>
           </div>
         </div><!--Col End-->
-
-
-      </div>
-
+</div>
 
 
     </div>
 
 
+   <div class="col-lg-4  col-md-12">
+      <div class="card">
+        <div class="card-body" style="margin-top: -20px; margin-bottom: -25px;">
+              <div class="wideget-user-tab">
+                  <div class="tab-menu-heading">
+                      <div class="tabs-menu1">
+                          <ul ngbNav #nav="ngbNav" [activeId]="1">
 
 
-<div class="col-lg-4">
-          <div class="card" [(ngbCollapse)]="isClosed20">
-           <div class="card-status bg-blue br-tr-7 br-tl-7"></div>
-            <div class="card-header border-bottom">
-              <h6 class="card-title ">Activity Tab</h6>
-              <div class="card-options ">
-                <a href="javascript:void(0)" class="card-options-collapse" data-bs-toggle="card-collapse"
-                  (click)="Collapsetoggle20()" [attr.aria-expanded]="!isCollapsed20"><i
-                    class="fe text-primary fe-chevron-{{ !isCollapsed20 ?  'up' : 'down'}}"></i></a>
-              </div>
-            </div>
-            <div [(ngbCollapse)]="isCollapsed20">
-            <div class="m-4">
-                      <ul class="task-list">
+                              <li [ngbNavItem]="1">
+                                <a ngbNavLink>Announcement</a>
+                                <ng-template ngbNavContent>
+
+                                  <div class="tab-pane active show" id="tab-51">
+                                    <div id="profile-log-switch">
+                                      <ul class="list-group">
+                                        <li class="list-group-item font-weight-500"><i class="fa fa-circle m-1" style="font-size: smaller;" aria-hidden="true"></i> <span class="badge bg-primary  me-1 my-1">01-12-2023</span>  The CAL FIRE – Office of the State Fire Marshal (OSFM) has regulatory authority over
+                                           intrastate hazardous liquid pipeline operators in California.</li>
+                                      <li class="list-group-item font-weight-500"><i class="fa fa-circle m-1" style="font-size: smaller;" aria-hidden="true"></i> <span class="badge bg-primary  me-1 my-1">05-12-2023</span>  The OSFM Pipeline Safety
+                                            Program investigates pipeline releases.</li>
+                                      <li class="list-group-item font-weight-500"><i class="fa fa-circle m-1" style="font-size: smaller;" aria-hidden="true"></i> <span class="badge bg-primary  me-1 my-1">05-12-2023</span>  A Pipeline accident at Refugio Beach in Santa Barbara County spilled over
+                                        100,000 gallons of crude oil and impacted over 25 miles of coastline and ocean water.</li>
+                                      <li class="list-group-item font-weight-500 mt-3" ><i class="fa fa-circle m-1" style="font-size: smaller;" aria-hidden="true"></i> <span class="badge bg-primary  me-1 my-1">21-05-2021</span> A ransomware attack on a pipeline operator</li>
+
+                                      </ul>
+              <div class="pagination-wrapper m-2 d-flex justify-content-end">
+              <nav aria-label="Page navigation">
+                <ul class="pagination mb-0">
+                  <li class="page-item">
+                    <a aria-label="Next" class="page-link" href="javascript:void(0)"><i class="fa fa-angle-left"></i></a>
+                  </li>
+                  <li class="page-item">
+                    <a aria-label="Next" class="page-link" href="javascript:void(0)"><i class="fa fa-angle-right"></i></a>
+                  </li>
+                </ul>
+              </nav>
+
+                                  </div>
+                                  </div>
+                                  </div>
+                                </ng-template>
+                              </li>
+
+
+                           <li [ngbNavItem]="2">
+                                <a ngbNavLink>Assignment Tab</a>
+                                <ng-template ngbNavContent>
+                                  <div class="card">
+                                    <div class="card-body">
+                                  <div class="tab-pane active show" id="tab-51">
+            <ul class="task-list" style="margin-top: -15px; margin-bottom: -20px;" >
             <li>
               <i class="task-icon bg-primary"></i>
               <div class="d-flex">
@@ -252,58 +284,44 @@
               </div>
             </li>
             </ul>
-            <div style="margin-bottom: 50px;"></div>
-
-          </div>
-
-            </div>
-          </div>
-</div>
+                                  </div>
+                                  </div>
+                                  </div>
+                                </ng-template>
+                              </li>
 
 
 
 
 
+                            </ul>
 
-
-<div class="col-lg-4">
-          <div class="card" [(ngbCollapse)]="isClosed21">
-           <div class="card-status bg-green br-tr-7 br-tl-7"></div>
-            <div class="card-header border-bottom">
-              <h6 class="card-title ">Announcement</h6>
-              <div class="card-options ">
-                <a href="javascript:void(0)" class="card-options-collapse" data-bs-toggle="card-collapse"
-                  (click)="Collapsetoggle21()" [attr.aria-expanded]="!isCollapsed21"><i
-                    class="fe text-primary fe-chevron-{{ !isCollapsed21 ?  'up' : 'down'}}"></i></a>
+                      </div>
+                  </div>
               </div>
-            </div>
-            <div [(ngbCollapse)]="isCollapsed21">
-
-                <ul class="list-group">
-                                        <li class="list-group-item font-weight-500"><i class="fa fa-circle m-1" style="font-size: smaller;" aria-hidden="true"></i> <span class="badge bg-primary  me-1 my-1">01-12-2023</span>  The CAL FIRE – Office of the State Fire Marshal (OSFM) has regulatory authority over
-                                           intrastate hazardous liquid pipeline operators in California.</li>
-                                      <li class="list-group-item font-weight-500"><i class="fa fa-circle m-1" style="font-size: smaller;" aria-hidden="true"></i> <span class="badge bg-primary  me-1 my-1">05-12-2023</span>  The OSFM Pipeline Safety
-                                            Program investigates pipeline releases.</li>
-                                      <li class="list-group-item font-weight-500"><i class="fa fa-circle m-1" style="font-size: smaller;" aria-hidden="true"></i> <span class="badge bg-primary  me-1 my-1">05-12-2023</span>  A Pipeline accident at Refugio Beach in Santa Barbara County spilled over
-                                        100,000 gallons of crude oil and impacted over 25 miles of coastline and ocean water.</li>
-                                      <li class="list-group-item font-weight-500 mt-3" ><i class="fa fa-circle m-1" style="font-size: smaller;" aria-hidden="true"></i> <span class="badge bg-primary  me-1 my-1">21-05-2021</span> A ransomware attack on a pipeline operator</li>
-
-                </ul>
-                <!-- <div style="margin-bottom: 38px;"></div> -->
-            </div>
-            <div class="pagination-wrapper m-2 d-flex justify-content-end">
-              <nav aria-label="Page navigation">
-                <ul class="pagination mb-0">
-                  <li class="page-item">
-                    <a aria-label="Next" class="page-link" href="javascript:void(0)"><i class="fa fa-angle-left"></i></a>
-                  </li>
-                  <li class="page-item">
-                    <a aria-label="Next" class="page-link" href="javascript:void(0)"><i class="fa fa-angle-right"></i></a>
-                  </li>
-                </ul>
-              </nav>
-            </div>
           </div>
+      <div [ngbNavOutlet]="nav"></div>
+
   </div>
-</div>
+  </div>
+
+
+
+
+
+
+
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
 

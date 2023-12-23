@@ -22,6 +22,8 @@ import { UserAddComponent } from './user-add/user-add.component';
 import { HydrostaticFirmsComponent } from './hydrostatic-firms/hydrostatic-firms.component';
 import { StateWaiverComponent } from './state-waiver/state-waiver.component';
 import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
+import { HomePage2Component } from './home-page2/home-page2.component';
+import { HomePage3Component } from './home-page3/home-page3.component';
 
 
 
@@ -36,7 +38,9 @@ import { UserDashboardComponent } from './user-dashboard/user-dashboard.componen
     UserAddComponent,
     HydrostaticFirmsComponent,
     StateWaiverComponent,
-    UserDashboardComponent
+    UserDashboardComponent,
+    HomePage2Component,
+    HomePage3Component
 
     ],
     imports: [

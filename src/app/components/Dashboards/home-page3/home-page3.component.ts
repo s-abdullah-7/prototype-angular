@@ -1,12 +1,12 @@
-import { Component , OnInit , AfterViewInit ,ViewChild } from '@angular/core';
+import { Component, OnInit , AfterViewInit ,ViewChild } from '@angular/core';
 import { NgbAccordion } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
-  selector: 'app-home-page',
-  templateUrl: './home-page.component.html',
-  styleUrls: ['./home-page.component.scss']
+  selector: 'app-home-page3',
+  templateUrl: './home-page3.component.html',
+  styleUrls: ['./home-page3.component.scss']
 })
-export class HomePageComponent implements AfterViewInit {
+export class HomePage3Component implements AfterViewInit {
   @ViewChild('acc') acc: NgbAccordion;
 
   ngAfterViewInit() {
@@ -16,23 +16,11 @@ export class HomePageComponent implements AfterViewInit {
     });
   }
 
+
+
   constructor() { }
 
-
   ngOnInit(): void {
-
-    this.isCollapsed1 = true;
-    this.isCollapsed2 = true;
-    this.isCollapsed3 = true;
-    this.isCollapsed4 = true;
-    this.isCollapsed5 = true;
-    this.isCollapsed6 = true;
-    this.isCollapsed7 = true;
-    this.isCollapsed8 = true;
-    this.isCollapsed9 = true;
-    this.isCollapsed10 = true;
-    this.isCollapsed11 = true;
-
   }
 
   public isCollapsed20 = false;
@@ -166,7 +154,7 @@ export class HomePageComponent implements AfterViewInit {
   }
 
     Collapsetoggle21() {
-    this.isCollapsed21 = !this.isCollapsed2;
+    this.isCollapsed21 = !this.isCollapsed21;
   }
 
 
@@ -181,5 +169,6 @@ export class HomePageComponent implements AfterViewInit {
     Closetoggle21() {
     this.isClosed21 = true;
   }
+
 
 }
