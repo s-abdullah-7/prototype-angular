@@ -1,11 +1,7 @@
 import { Component, ElementRef,OnInit , ViewChild } from '@angular/core';
-import * as Chart from 'chart.js';
-// import * as chartData from '../../../shared/data/chart/chartjs';
-import * as echarts from 'echarts';
-import { echartLineOption } from 'src/app/shared/data/chart/echart';
-import { EChartsOption } from 'echarts';
-
 import * as chartData from '../../../../../app/shared/data/chart/custom-echarts';
+
+
 
 @Component({
   selector: 'app-test-chart',

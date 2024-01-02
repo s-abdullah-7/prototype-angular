@@ -214,6 +214,8 @@ export function handleThemeUpdate(cssVars: any) {
   const root: any = document.querySelector(':root');
   const keys = Object.keys(cssVars);
 
+  
+
   keys.forEach((key) => {
     root.style.setProperty(key, cssVars[key]);
   });

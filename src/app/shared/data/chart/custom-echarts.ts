@@ -46,6 +46,45 @@ export let pieChartData : EChartsOption = {
 }
 
 
+//Pie Chart Data
+export let pieChartAdminData : EChartsOption = {
+  title: {
+    text: 'USERS',
+    subtext: '',
+    left: 'center'
+  },
+  tooltip: {
+    trigger: 'item'
+  },
+  legend: {
+    orient: 'vertical',
+    left: 'left'
+  },
+  series: [
+    {
+      name: 'Access From',
+      type: 'pie',
+      radius: '50%',
+      data: [
+        { value: 1048, name: 'Internal' },
+        { value: 735, name: 'External' },
+        { value: 580, name: 'Admin' },
+      ],
+      emphasis: {
+        itemStyle: {
+          shadowBlur: 10,
+          shadowOffsetX: 0,
+          shadowColor: 'rgba(0, 0, 0, 0.5)'
+        }
+      }
+    }
+  ]
+};
+
+
+
+
+
 //Basic area chart
 export let basicChartLine : EChartsOption = {
   title:{

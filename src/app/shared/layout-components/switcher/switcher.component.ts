@@ -63,10 +63,10 @@ export class SwitcherComponent implements OnInit {
   }
   ngOnInit(): void {
 
+
     document.body.classList.add('color-menu');
     document.body.classList.add('Slicahorizontal');
     document.body.classList.remove('dark-header', 'light-header');
-
 
 
     switcher.localStorageBackUp();

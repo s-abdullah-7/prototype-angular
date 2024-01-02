@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserService } from 'src/app/shared/services/UserService';
+
 
 @Component({
   selector: 'app-admin-dashboard',
@@ -35,9 +36,6 @@ export class AdminDashboardComponent implements OnInit {
     'Mapping'
 ];
 
-
-
-
   constructor(private router: Router, private userService: UserService) { }
 
   ngOnInit(): void {
@@ -59,4 +57,7 @@ export class AdminDashboardComponent implements OnInit {
   editUser(userId: number) {
     this.router.navigate([`/user/edit/${userId}`]); // Navigates to the user edit page with the specific ID
   }
+
+
+
 }

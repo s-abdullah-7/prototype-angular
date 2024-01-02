@@ -24,6 +24,8 @@ import { StateWaiverComponent } from './state-waiver/state-waiver.component';
 import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
 import { HomePage2Component } from './home-page2/home-page2.component';
 import { HomePage3Component } from './home-page3/home-page3.component';
+import { AdminPrivilegeComponent } from './admin-privilege/admin-privilege.component';
+import { PendingUsersComponent } from './pending-users/pending-users.component';
 
 
 
@@ -40,7 +42,9 @@ import { HomePage3Component } from './home-page3/home-page3.component';
     StateWaiverComponent,
     UserDashboardComponent,
     HomePage2Component,
-    HomePage3Component
+    HomePage3Component,
+    AdminPrivilegeComponent,
+    PendingUsersComponent
 
     ],
     imports: [

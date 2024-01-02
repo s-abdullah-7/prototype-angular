@@ -1,16 +1,13 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserService } from 'src/app/shared/services/UserService';
-import * as chartData from '../../../../app/shared/data/chart/custom-echarts';
-
-
 
 @Component({
-  selector: 'app-user-dashboard',
-  templateUrl: './user-dashboard.component.html',
-  styleUrls: ['./user-dashboard.component.scss']
+  selector: 'app-pending-users',
+  templateUrl: './pending-users.component.html',
+  styleUrls: ['./pending-users.component.scss']
 })
-export class UserDashboardComponent implements OnInit {
+export class PendingUsersComponent implements OnInit {
   users: any[] = [];
   selectedCategory: string = '';
   userRoles: string[] = []; // Array to hold the dynamically loaded roles
@@ -38,9 +35,6 @@ export class UserDashboardComponent implements OnInit {
     'Mapping'
 ];
 
-
-
-
   constructor(private router: Router, private userService: UserService) { }
 
   ngOnInit(): void {
@@ -60,11 +54,9 @@ export class UserDashboardComponent implements OnInit {
 
 
   editUser(userId: number) {
-    this.router.navigate([`/user/edit/${userId}`]); // Navigates to the user edit page with the specific ID
+    this.router.navigate([`/user/add/${userId}`]); // Navigates to the user edit page with the specific ID
   }
 
-  @ViewChild('Canvas') Canvas: ElementRef | any;
-  @ViewChild('myCanvas') myCanvas: ElementRef | any;
 
-  public eChartPieOption = chartData.pieChartAdminData;
+
 }

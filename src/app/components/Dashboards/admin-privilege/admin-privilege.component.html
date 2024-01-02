@@ -1,0 +1,69 @@
+
+<!-- ROW OPEN -->
+<div class="row">
+    <div class="col-xl-12">
+    <div class="card">
+    <div class="card-header">
+        User Privilages
+    </div>
+
+    
+
+
+
+
+        <div class="card-body">
+
+                <div class="table-responsive table-lg">
+
+                    <table class="table table-bordered mb-0">
+                        <thead>
+                            <tr>
+                                <th class="text-center">ID</th>
+                                <th class="text-center">Modules</th>
+                                <th class="text-center" colspan="3">Privilege</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let module of dashboardModules; let i = index">
+                                <td class="align-middle text-center">{{i+1}} </td>
+                                <td class="text-nowrap align-middle">
+                                    {{module}}
+                                </td>
+                                <td class="text-center align-middle">
+                                    <div class="btn-group align-top">
+                                        <label class="custom-control custom-checkbox mx-3">
+											<input type="checkbox" class="custom-control-input" name="example-checkbox1" value="option1" checked="">
+											<span class="custom-control-label">View</span>
+										</label>
+                                    </div>
+                                </td>    
+                                <td class="text-center align-middle">
+                                    <div class="btn-group align-top">
+                                        <label class="custom-control custom-checkbox mx-3">
+											<input type="checkbox" class="custom-control-input" name="example-checkbox1" value="option1" checked="">
+											<span class="custom-control-label">Edit</span>
+										</label>
+                                    </div>
+                                </td>    
+                                <td class="text-center align-middle">
+                                    <div class="btn-group align-top">
+                                        <label class="custom-control custom-checkbox mx-3">
+											<input type="checkbox" class="custom-control-input" name="example-checkbox1" value="option1" checked="">
+											<span class="custom-control-label">Delete</span>
+										</label>
+                                    </div>
+                                </td>    
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+        </div>
+
+
+</div>
+<!-- ROW CLOSED -->
+

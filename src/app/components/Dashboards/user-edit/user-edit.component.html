@@ -1,8 +1,7 @@
-<div class="d-flex m-3 " >
+<div class="d-flex m-3 mt-7" >
 <div>
 <ol class="breadcrumb1">
     <li class="breadcrumb-item1"><a href="javascript:void(0)">Home</a></li>
-    <li class="breadcrumb-item1 active">Admin</li>
     <li class="breadcrumb-item1 active">User Management</li>
     <li class="breadcrumb-item1 active">User Edit</li>
 </ol>
@@ -11,8 +10,9 @@
 <div class="ms-auto ">
 
 <button class="btn btn-success" style="margin-right: 10px;"><i class="fa fa-plus mx-2" aria-hidden="true"></i>Add</button>
+<button class="btn btn-success" style="margin-right: 10px;"><i class="fa fa-save mx-2" aria-hidden="true"></i>Save</button>
 <button class="btn btn-success" style="margin-right: 10px;" ><i class="fa fa-undo mx-2" aria-hidden="true"></i>Reset</button>
-<button class="btn btn-primary"><i class="fa fa-caret-left mx-2" aria-hidden="true"></i>Back</button>
+<button class="btn btn-primary" routerLink="/dashboard/admin"><i class="fa fa-caret-left mx-2" aria-hidden="true" ></i>Back</button>
 </div>
 
 
@@ -20,7 +20,7 @@
 
 <div class="row d-flex justify-content-center" >
 
-  <div class="col-xl-6" >
+  <div class="col-lg-12" >
 
     <div class="card">
       <div class="card-body">
@@ -28,19 +28,102 @@
           <h4>Edit User</h4>
         </div>
         <form (ngSubmit)="onSubmit()">
+        <div class="row">
+                <div class="col-lg-6">
           <div class="form-group">
             <label for="name">Name:</label>
             <input type="text" class="form-control" id="name" name="name" [(ngModel)]="user.name">
           </div>
+        
+        </div>
+        <div class="col-lg-6">
           <div class="form-group">
-            <label for="category">Category:</label>
-            <input type="text" class="form-control" id="category" name="category" [(ngModel)]="user.userCategory">
+            <label for="name">Address:</label>
+            <input type="text" class="form-control" id="address" name="address" [(ngModel)]="user.address">
           </div>
-          <div class="form-group">
-            <label for="role">Role:</label>
-            <input type="text" class="form-control" id="role" name="role" [(ngModel)]="user.userRole">
+        
+        </div>
+        <div class="col-lg-6">
+        </div>
+
+        <div class="col-lg-6">
+                  <div class="form-group">
+            <label for="name">Number:</label>
+            <input type="text" class="form-control" id="number" name="number" [(ngModel)]="user.number">
           </div>
+        
+        </div>
+
+
+
+        </div><!--ro-->
+
+        <div class="row">
+
+        <div class="col-lg-6">
+            <div class="btn-group mt-2 mb-2 d-grid " ngbDropdown>
+            <button type="button" class="btn btn-default dropdown-toggle me-1 d-flex" ngbDropdownToggle>
+                User Category : {{userCategoryName}}<span class="mx-1 ms-auto"><i class="fa fa-caret-down" aria-hidden="true"></i></span>
+            </button>
+              <ul ngbDropdownMenu role="menu">
+                <li>
+                  <div class="custom-controls-stacked m-3">
+                    <label class="custom-control custom-radio">
+                      <input type="radio" class="custom-control-input"
+                         (change)="onCategoryChange('External')" name="userCategory" value="External" >
+                          <span class="custom-control-label">External</span>
+                    </label>
+                    <label class="custom-control custom-radio">
+                                        <input type="radio" class="custom-control-input"
+                                            (change)="onCategoryChange('Internal')" name="userCategory"
+                                            value="Internal" >
+                                        <span class="custom-control-label">Internal</span>
+                    </label>
+                    <label class="custom-control custom-radio">
+                                      <input type="radio" class="custom-control-input"
+                                          (change)="onCategoryChange('Admin')" name="userCategory"
+                                          value="Admin" >
+                                      <span class="custom-control-label">Admin</span>
+                    </label>
+                                </div>
+                </li>
+              </ul>
+
+          </div>
+        
+        </div>
+
+
+        <div class="col-lg-6">
+                  <div class="btn-group mt-2 mb-2 d-grid" ngbDropdown>
+            <button type="button" class="btn btn-default  dropdown-toggle me-1 d-flex" ngbDropdownToggle>
+                User Roles : {{userRoless}} <span class="ms-auto"><i class="fa fa-caret-down" aria-hidden="true"></i></span>
+            </button>
+
+    <ul ngbDropdownMenu role="menu" class="dropdown-menu">
+      <div class="custom-controls-stacked m-3 d-grid">
+        <label *ngFor="let role of userRoles" class="custom-control custom-checkbox" style="width: inherit;">
+          <input type="checkbox" class="custom-control-input" name="example-checkbox1" [value]="role">
+          <span class="custom-control-label">{{role}}</span>
+        </label>
+      </div>
+    </ul>
+            </div>
+        
+        </div>
+        
+        
+        </div>
+        
+        
+
+        
+        
+        
+          <div class="d-flex justify-content-end mt-5">
           <button type="submit" class="btn btn-primary">Save</button>
+          
+          </div>
         </form>
       </div>
     </div>
@@ -48,3 +131,4 @@
   </div>
 
 </div>
+<app-admin-privilege></app-admin-privilege>

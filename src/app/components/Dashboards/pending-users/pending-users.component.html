@@ -1,0 +1,152 @@
+<div class="d-flex mt-3" >
+
+<ol class="breadcrumb1">
+    <li class="breadcrumb-item1"><a href="javascript:void(0)">Home</a></li>
+    <li class="breadcrumb-item1 active">Admin</li>
+    <li class="breadcrumb-item1 active">Pending Users</li>
+</ol>
+
+<div class="ms-auto mt-2">
+        <a href="javascript:void(0)" class="text-primary" style="font-weight: bold; font-size: 15px;" >
+             <!--{{ dateObj | date:'fullDate' }}--> Sunday, January 1, 2023
+        </a>
+</div>
+
+
+</div>
+
+
+
+<!-- ROW OPEN -->
+<div class="row">
+    <div class="col-xl-12">
+
+
+      <div class="card">
+
+
+        <div class="card-header">
+
+        <div class="input-group " style="width: 300px;" >
+            <label for="abc">User: </label>
+            <input id="abc" class="form-control mx-4  " type="text" >
+
+          </div>
+
+          <div class="btn-group mt-2 mb-2" ngbDropdown>
+            <button type="button" class="btn btn-default dropdown-toggle me-1"  ngbDropdownToggle>
+                User Category<span class="mx-1"><i class="fa fa-caret-down" aria-hidden="true"></i></span>
+            </button>
+              <ul ngbDropdownMenu role="menu">
+                <li>
+                  <div class="custom-controls-stacked m-3">
+                    <label class="custom-control custom-radio">
+                      <input type="radio" class="custom-control-input"
+                         (change)="onCategoryChange('External')" name="userCategory" value="External" >
+                          <span class="custom-control-label">External</span>
+                    </label>
+                    <label class="custom-control custom-radio">
+                                        <input type="radio" class="custom-control-input"
+                                            (change)="onCategoryChange('Internal')" name="userCategory"
+                                            value="Internal" >
+                                        <span class="custom-control-label">Internal</span>
+                    </label>
+                    <label class="custom-control custom-radio">
+                                      <input type="radio" class="custom-control-input"
+                                          (change)="onCategoryChange('Internal')" name="userCategory"
+                                          value="Internal" >
+                                      <span class="custom-control-label">Admin</span>
+                    </label>
+                                </div>
+                </li>
+              </ul>
+
+          </div>
+
+          <div class="btn-group mt-2 mb-2" ngbDropdown>
+            <button type="button" class="btn btn-default dropdown-toggle me-1" ngbDropdownToggle>
+                User Roles <span ><i class="fa fa-caret-down" aria-hidden="true"></i></span>
+            </button>
+
+            <ul ngbDropdownMenu role="menu">
+                  <div class="custom-controls-stacked m-3">
+                      <label *ngFor="let role of userRoles" class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input" name="example-checkbox1" [value]="role" >
+                          <span class="custom-control-label">{{role}}</span>
+                       </label>
+                  </div>
+
+              </ul>
+            </div>
+
+            <div class="btn-group mt-2 mb-2 ms-auto">
+                <button type="button" class="btn btn-primary dropdown-toggle me-1" > <i class="fa fa-search" aria-hidden="true"></i> Search</button>
+
+            </div>
+
+
+
+
+
+        </div>
+
+        <div class="card-body">
+
+
+                <div class="table-responsive table-lg">
+
+                    <table class="table table-bordered mb-0">
+                        <thead>
+                            <tr>
+                                <th class="text-center" colspan="1">ID</th>
+                                <th class="text-center" colspan="1">User Name</th>
+                                <th class="text-center" colspan="1">User Type</th>
+                                <th class="text-center">AD</th>
+                                <th class="text-center">APP</th>
+                                <th class="text-center">B2C</th>
+                                <th class="text-center" colspan="1">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let i of users">
+                                <td class="align-middle text-center">{{i.id}}</td>
+                                <td class="text-nowrap ">{{i.name}}</td>
+                                <td class="text-nowrap text-center">{{i.userCategory}}</td>
+                                <td class="text-nowrap text-center"><input type="checkbox" id="myCheckbox" name="myCheckbox"></td>
+                                <td class="text-nowrap text-center"><input type="checkbox" id="myCheckbox" name="myCheckbox"></td>
+                                <td class="text-nowrap text-center">
+                                    <input type="checkbox" id="myCheckbox" name="myCheckbox">
+                                </td>
+                                <td class="text-center align-middle">
+                                    <div class="btn-group align-top">
+                                        <button class="btn btn-sm btn-primary-light" type="button"
+                                            (click)="editUser(i.id)">Add</button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        <div class="m-5">
+            <ul class="pagination float-end mb-5">
+                <li class="page-item page-prev disabled">
+                    <a class="page-link" href="javascript:void(0)" tabindex="-1">Prev</a>
+                </li>
+                <li class="page-item active"><a class="page-link" href="javascript:void(0)">1</a></li>
+                <li class="page-item"><a class="page-link" href="javascript:void(0)">2</a></li>
+                <li class="page-item"><a class="page-link" href="javascript:void(0)">3</a></li>
+                <li class="page-item"><a class="page-link" href="javascript:void(0)">4</a></li>
+                <li class="page-item"><a class="page-link" href="javascript:void(0)">5</a></li>
+                <li class="page-item page-next">
+                    <a class="page-link" href="javascript:void(0)">Next</a>
+                </li>
+            </ul>
+        </div>
+        </div>
+    </div><!-- COL-END -->
+
+</div>
+
+<!-- ROW CLOSED -->
+
