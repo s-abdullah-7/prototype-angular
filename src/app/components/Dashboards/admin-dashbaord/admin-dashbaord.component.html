@@ -1,4 +1,18 @@
-<app-page-header title="Home"  active_item="Admin" active_item2="User Management"></app-page-header>
+<div class="d-flex mt-3" >
+
+<ol class="breadcrumb1">
+    <li class="breadcrumb-item1"><a href="javascript:void(0)">Home</a></li>
+    <li class="breadcrumb-item1 active">User Management</li>
+</ol>
+
+<div class="ms-auto mt-2">
+        <a href="javascript:void(0)" class="text-primary" style="font-weight: bold; font-size: 15px;" >
+             <!--{{ dateObj | date:'fullDate' }}--> Sunday, January 1, 2023
+        </a>
+</div>
+
+
+</div>
 
 
 
@@ -12,7 +26,7 @@
 
         <div class="card-header">
 
-                  <div class="input-group " style="width: 300px;" >
+        <div class="input-group " style="width: 300px;" >
             <label for="abc">User: </label>
             <input id="abc" class="form-control mx-4  " type="text" >
 
@@ -69,10 +83,6 @@
 
             </div>
 
-
-
-
-
         </div>
 
         <div class="card-body">
@@ -85,6 +95,8 @@
                             <tr>
                                 <th class="text-center">ID</th>
                                 <th class="text-center">User Name</th>
+                                <th class="text-center">Address</th>
+                                <th class="text-center">Number</th>
                                 <th>User Category</th>
                                 <th>User Role</th>
                                 <th class="text-center">Actions</th>
@@ -94,6 +106,8 @@
                             <tr *ngFor="let i of users">
                                 <td class="align-middle text-center">{{i.id}}</td>
                                 <td class="text-nowrap align-middle">{{i.name}}</td>
+                                <td class="text-nowrap align-middle">{{i.address}}</td>
+                                <td class="text-nowrap align-middle">{{i.number}}</td>
                                 <td class="text-nowrap align-middle"><span>{{i.userCategory}}</span></td>
                                 <td class="text-nowrap align-middle">
                                     {{i.userRole}}
