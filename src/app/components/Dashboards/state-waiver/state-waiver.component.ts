@@ -1,11 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component , OnInit , AfterViewInit ,ViewChild } from '@angular/core';
 import * as chartData2 from '../../../shared/data/chart/chartjs'
 import * as chartData from '../../../shared/data/chart/apex';
+import { NgbAccordion } from '@ng-bootstrap/ng-bootstrap';
 
 import {
 
-
-  ChartComponent,
   ApexAxisChartSeries,
   ApexChart,
   ApexFill,
@@ -39,169 +38,187 @@ export type ChartOptions = {
   templateUrl: './state-waiver.component.html',
   styleUrls: ['./state-waiver.component.scss']
 })
-export class StateWaiverComponent implements OnInit {
+export class StateWaiverComponent implements OnInit , AfterViewInit {
+  @ViewChild('acc') acc: NgbAccordion;
 
-  public isCollapsed1 = false;
-  public isClosed1 = false;
-  public isCollapsed2 = false;
-  public isClosed2 = false;
+  ngAfterViewInit() {
+    setTimeout(() => {
+      this.acc.collapseAll();
+      this.acc.expand('panel1');
+    });
 
+    
+  }
   chartOptions: any;
 
-  constructor() {
-        this.chartOptions = {
-      series: [
-    {
-      name: "Operator Name",
-      type: "bar",
-      data: [23, 11, 22, 27, 13, 22, 37, 21, 44, 22, 30, 30]
-    },
-    {
-      name: "Line ID",
-      type: "area",
-      data: [44, 55, 41, 67, 22, 43, 21, 41, 56, 27, 43, 43]
-    },
-    {
-      name: "Description",
-      type: "line",
-      data: [30, 25, 36, 30, 45, 35, 64, 52, 59, 36, 39, 39]
-    }
-  ],
-  chart: {
-    height: 350,
-    type: "line",
-    left: "-57"
-  },
-  dataLabels: {
-    enabled: false
-  },
-  stroke: {
-    width: [0],
-    curve: "smooth"
-  },
-  plotOptions: {
-    bar: {
-      columnWidth: "15%"
-    }
-  },
-  yaxis: {
-    title: {
-      text: ""
-    },
-    min: 0
-  },
-  tooltip: {
-    shared: true,
-    intersect: false,
-    y: {
-      formatter: function (y: number) {
-        if (typeof y !== "undefined") {
-          return y?.toFixed(0) + " points";
-        }
-        return y;
-      }
-    }
-  },
-  grid: {
-    show: false
-  }
+  constructor() { };
+  
 
-
-
-    };
-  }
-
-  stateWaivers = [
-    {
-      operatorName: 'AIMEE CAUGUIRAN',
-      lineID: '56789',
-      description: 'Maintenance and repair waiver',
-      leadPSE: 'John Smith',
-      status: 'Active',
-      applicationDate: '2023-02-20',
-      expirationDate: '2024-02-20'
-    },
-    {
-      operatorName: 'AL GIESE',
-      lineID: '98765',
-      description: 'Safety upgrade waiver',
-      leadPSE: 'Sarah Johnson',
-      status: 'In Review',
-      applicationDate: '2023-03-10',
-      expirationDate: '2024-03-10'
-    },
-    {
-      operatorName: 'ALULA GEBRMENDHIN',
-      lineID: '12345',
-      description: 'Pipeline integrity assessment waiver',
-      leadPSE: 'Emma Brown',
-      status: 'Expired',
-      applicationDate: '2022-12-01',
-      expirationDate: '2023-12-01'
-    },
-    {
-      operatorName: 'BITA EMANI',
-      lineID: '54321',
-      description: 'Emergency repair waiver',
-      leadPSE: 'Michael Davis',
-      status: 'Active',
-      applicationDate: '2023-01-05',
-      expirationDate: '2024-01-05'
-    },
-    {
-      operatorName: 'BOB GORHAM',
-      lineID: '24680',
-      description: 'Routine maintenance waiver',
-      leadPSE: 'Jennifer Wilson',
-      status: 'Active',
-      applicationDate: '2023-04-15',
-      expirationDate: '2024-04-15'
-    },
-    {
-      operatorName: 'CHUCK MACDONALD',
-      lineID: '13579',
-      description: 'Environmental impact assessment waiver',
-      leadPSE: 'Emily Miller',
-      status: 'In Review',
-      applicationDate: '2023-06-20',
-      expirationDate: '2024-06-20'
-    },
-    {
-      operatorName: 'DAN LEE',
-      lineID: '11223',
-      description: 'Safety inspection waiver',
-      leadPSE: 'William Brown',
-      status: 'Active',
-      applicationDate: '2023-07-30',
-      expirationDate: '2024-07-30'
-    },
-    {
-      operatorName: 'DURGA SHRESHTA',
-      lineID: '99887',
-      description: 'Equipment upgrade waiver',
-      leadPSE: 'Olivia Garcia',
-      status: 'Expired',
-      applicationDate: '2023-08-12',
-      expirationDate: '2024-08-12'
-    },
-
-
-  ];
 
   ngOnInit(): void {
+
+    this.isCollapsed1 = true;
+    this.isCollapsed2 = true;
+    this.isCollapsed3 = true;
+    this.isCollapsed4 = true;
+    this.isCollapsed5 = true;
+    this.isCollapsed6 = true;
+    this.isCollapsed7 = true;
+    this.isCollapsed8 = true;
+    this.isCollapsed9 = true;
+    this.isCollapsed10 = true;
+    this.isCollapsed11 = true;
+
   }
+
+    public isCollapsed20 = false;
+  public isClosed20 = false;
+
+  public isCollapsed21 = false;
+  public isClosed21 = false;
+
+  public isCollapsed1 = true;
+  public isClosed1 = false;
+
+  public isCollapsed2 = true;
+  public isClosed2 = false;
+
+  public isCollapsed3 = true;
+  public isClosed3 = false;
+
+  public isCollapsed4 = true;
+  public isClosed4 = false;
+
+  public isCollapsed5 = true;
+  public isClosed5 = false;
+
+  public isCollapsed6 = false;
+  public isClosed6 = false;
+
+  public isCollapsed7 = false;
+  public isClosed7 = false;
+
+  public isCollapsed8 = false;
+  public isClosed8 = false;
+
+  public isCollapsed9 = false;
+  public isClosed9 = false;
+
+  public isCollapsed10 = false;
+  public isClosed10 = false;
+
+  public isCollapsed11 = false;
+  public isClosed11 = false;
+
+
+
   Collapsetoggle1() {
     this.isCollapsed1 = !this.isCollapsed1;
   }
+
   Closetoggle1() {
     this.isClosed1 = true
   }
+
+
   Collapsetoggle2() {
     this.isCollapsed2 = !this.isCollapsed2;
   }
+
   Closetoggle2() {
     this.isClosed2 = true
   }
+
+  Collapsetoggle3() {
+    this.isCollapsed3 = !this.isCollapsed3;
+  }
+
+  Closetoggle3() {
+    this.isClosed3 = true
+  }
+
+  Collapsetoggle4() {
+    this.isCollapsed4 = !this.isCollapsed4;
+  }
+
+  Closetoggle4() {
+    this.isClosed4 = true
+  }
+
+  Collapsetoggle5() {
+    this.isCollapsed5 = !this.isCollapsed5;
+  }
+
+  Closetoggle5() {
+    this.isClosed5 = true
+  }
+
+  Collapsetoggle6() {
+    this.isCollapsed6 = !this.isCollapsed6;
+  }
+
+  Closetoggle6() {
+    this.isClosed6 = true
+  }
+
+  Collapsetoggle7() {
+    this.isCollapsed7 = !this.isCollapsed7;
+  }
+
+  Closetoggle7() {
+    this.isClosed7 = true;
+  }
+
+  Collapsetoggle8() {
+    this.isCollapsed8 = !this.isCollapsed8;
+  }
+
+  Closetoggle8() {
+    this.isClosed8 = true;
+  }
+
+  Collapsetoggle9() {
+    this.isCollapsed9 = !this.isCollapsed9;
+  }
+
+  Closetoggle9() {
+    this.isClosed9 = true;
+  }
+
+  Collapsetoggle10() {
+    this.isCollapsed10 = !this.isCollapsed10;
+  }
+
+  Closetoggle10() {
+    this.isClosed10 = true;
+  }
+
+  Collapsetoggle11() {
+    this.isCollapsed11 = !this.isCollapsed11;
+  }
+
+  Collapsetoggle20() {
+    this.isCollapsed20 = !this.isCollapsed20;
+  }
+
+    Collapsetoggle21() {
+    this.isCollapsed21 = !this.isCollapsed21;
+  }
+
+
+  Closetoggle11() {
+    this.isClosed11 = true;
+  }
+
+    Closetoggle20() {
+    this.isClosed20 = true;
+  }
+
+    Closetoggle21() {
+    this.isClosed21 = true;
+  }
+
+
 
   public apexData = chartData.ApexChartData;
   public PieChartData = chartData2.PieChartData;

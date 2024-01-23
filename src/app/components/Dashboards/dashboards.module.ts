@@ -26,6 +26,17 @@ import { HomePage2Component } from './home-page2/home-page2.component';
 import { HomePage3Component } from './home-page3/home-page3.component';
 import { AdminPrivilegeComponent } from './admin-privilege/admin-privilege.component';
 import { PendingUsersComponent } from './pending-users/pending-users.component';
+import { UserAddingComponent } from './user-adding/user-adding.component';
+import { DataRequestComponent } from './data-request/data-request.component';
+import { EvaluationComponent } from './evaluation/evaluation.component';
+import { ComplianceComponent } from './compliance/compliance.component';
+import { TrackComponent } from './track/track.component';
+import { DataRequestAnswerComponent } from './data-request-answer/data-request-answer.component';
+import { DataRequestQuestionComponent } from './data-request-question/data-request-question.component';
+import { NotificationComponent } from './notification/notification.component';
+import { ActivityLogComponent } from './activity-log/activity-log.component';
+import { NotificationViewComponent } from './notification-view/notification-view.component';
+
 
 
 
@@ -44,7 +55,17 @@ import { PendingUsersComponent } from './pending-users/pending-users.component';
     HomePage2Component,
     HomePage3Component,
     AdminPrivilegeComponent,
-    PendingUsersComponent
+    PendingUsersComponent,
+    UserAddingComponent,
+    DataRequestComponent,
+    EvaluationComponent,
+    ComplianceComponent,
+    TrackComponent,
+    DataRequestAnswerComponent,
+    DataRequestQuestionComponent,
+    NotificationComponent,
+    ActivityLogComponent,
+    NotificationViewComponent,
 
     ],
     imports: [

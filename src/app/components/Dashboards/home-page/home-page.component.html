@@ -1,8 +1,21 @@
-<app-page-header title="Home"></app-page-header>
+<div class="d-flex responsive-margin" >
+
+<ol class="breadcrumb1">
+    <li class="breadcrumb-item1"><a href="javascript:void(0)">Home</a></li>
+</ol>
+
+<div class="ms-auto mt-2">
+        <a href="javascript:void(0)" class="text-primary" style="font-weight: bold; font-size: 15px;" >
+             <!--{{ dateObj | date:'fullDate' }}--> Sunday, January 1, 2023
+        </a>
+</div>
+
+
+</div>
 
 <!-- ROW OPEN -->
-<div class="row " >
-    <div class="col-lg-4">
+<div class="row" >
+    <div class="col-lg-6">
       <div class="row mb-0">
         <div class="col-md-12 col-lg-6">
           <div class="card" [(ngbCollapse)]="isClosed1">
@@ -189,82 +202,10 @@
 
 
 
-<div class="col-lg-4">
-          <div class="card" [(ngbCollapse)]="isClosed20">
-           <div class="card-status bg-blue br-tr-7 br-tl-7"></div>
-            <div class="card-header border-bottom">
-              <h6 class="card-title ">Activity Tab</h6>
-              <div class="card-options ">
-                <a href="javascript:void(0)" class="card-options-collapse" data-bs-toggle="card-collapse"
-                  (click)="Collapsetoggle20()" [attr.aria-expanded]="!isCollapsed20"><i
-                    class="fe text-primary fe-chevron-{{ !isCollapsed20 ?  'up' : 'down'}}"></i></a>
-              </div>
-            </div>
-            <div [(ngbCollapse)]="isCollapsed20">
-            <div class="m-4">
-                      <ul class="task-list">
-            <li>
-              <i class="task-icon bg-primary"></i>
-              <div class="d-flex">
-                <div class="">
-                  <p class="mb-0"><span class="font-weight-500">Complaine action</span> are Overdue by 2 days.</p>
-                  <small class="text-muted">05 Feb 2023</small>
-                </div>
-              </div>
-            </li>
-            <li>
-              <i class="task-icon bg-primary"></i>
-              <div class="d-flex">
-                <div class="">
-                  <p class="mb-0"><span class="font-weight-500">Civil Penalty</span> is Pending by 1 day.</p>
-                  <small class="text-muted">25 Feb 2023</small>
-                </div>
-              </div>
-            </li>
-            <li>
-              <i class="task-icon bg-primary"></i>
-              <div class="d-flex">
-                <div class="">
-                  <p class="mb-0"><span class="font-weight-500">Integrity Testing</span> are in Due by 5 days.</p>
-                  <small class="text-muted">05 Mar 2023</small>
-                </div>
-              </div>
-            </li>
-            <li>
-              <i class="task-icon bg-primary"></i>
-              <div class="d-flex">
-                <div class="">
-                  <p class="mb-0"><span class="font-weight-500">Reports are</span> Pending by 6 days.</p>
-                  <small class="text-muted">15 April 2023</small>
-                </div>
-
-              </div>
-            </li>
-            <li>
-              <i class="task-icon bg-primary"></i>
-              <div class="d-flex">
-                <div class="">
-                  <p class="mb-0"><span class="font-weight-500">Accident Records </span>are Overdue by 2 Days.</p>
-                  <small class="text-muted">15 May 2023</small>
-                </div>
-              </div>
-            </li>
-            </ul>
-            <div style="margin-bottom: 50px;"></div>
-
-          </div>
-
-            </div>
-          </div>
-</div>
 
 
 
-
-
-
-
-<div class="col-lg-4">
+<div class="col-lg-6">
           <div class="card" [(ngbCollapse)]="isClosed21">
            <div class="card-status bg-green br-tr-7 br-tl-7"></div>
             <div class="card-header border-bottom">
@@ -278,16 +219,16 @@
             <div [(ngbCollapse)]="isCollapsed21">
 
                 <ul class="list-group">
-                                        <li class="list-group-item font-weight-500"><i class="fa fa-circle m-1" style="font-size: smaller;" aria-hidden="true"></i> <span class="badge bg-primary  me-1 my-1">01-12-2023</span>  The CAL FIRE – Office of the State Fire Marshal (OSFM) has regulatory authority over
+                                        <li class="list-group-item font-weight-500"> <span class="badge bg-primary  me-1 my-1">01-12-2023 , 3:05 PM</span> <br> The CAL FIRE – Office of the State Fire Marshal (OSFM) has regulatory authority over
                                            intrastate hazardous liquid pipeline operators in California.</li>
-                                      <li class="list-group-item font-weight-500"><i class="fa fa-circle m-1" style="font-size: smaller;" aria-hidden="true"></i> <span class="badge bg-primary  me-1 my-1">05-12-2023</span>  The OSFM Pipeline Safety
+                                      <li class="list-group-item font-weight-500"> <span class="badge bg-primary  me-1 my-1">05-12-2023 , 12:05 PM</span> <br> The OSFM Pipeline Safety
                                             Program investigates pipeline releases.</li>
-                                      <li class="list-group-item font-weight-500"><i class="fa fa-circle m-1" style="font-size: smaller;" aria-hidden="true"></i> <span class="badge bg-primary  me-1 my-1">05-12-2023</span>  A Pipeline accident at Refugio Beach in Santa Barbara County spilled over
+                                      <li class="list-group-item font-weight-500"> <span class="badge bg-primary  me-1 my-1">05-12-2023 , 1:10 PM</span> <br> A Pipeline accident at Refugio Beach in Santa Barbara County spilled over
                                         100,000 gallons of crude oil and impacted over 25 miles of coastline and ocean water.</li>
-                                      <li class="list-group-item font-weight-500 mt-3" ><i class="fa fa-circle m-1" style="font-size: smaller;" aria-hidden="true"></i> <span class="badge bg-primary  me-1 my-1">21-05-2021</span> A ransomware attack on a pipeline operator</li>
+                                      <li class="list-group-item font-weight-500 mt-3" style="padding-bottom: 42.5px;" > <span class="badge bg-primary  me-1 my-1">21-05-2021 , 4:30 PM</span> <br> A ransomware attack on a pipeline operator</li>
 
                 </ul>
-                <!-- <div style="margin-bottom: 38px;"></div> -->
+                
             </div>
             <div class="pagination-wrapper m-2 d-flex justify-content-end">
               <nav aria-label="Page navigation">

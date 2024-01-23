@@ -10,6 +10,7 @@ import { UserService } from 'src/app/shared/services/UserService';
 })
 export class AdminDashboardComponent implements OnInit {
   users: any[] = [];
+  dateObj: Date
   selectedCategory: string = '';
   userRoles: string[] = []; // Array to hold the dynamically loaded roles
 
@@ -42,6 +43,8 @@ export class AdminDashboardComponent implements OnInit {
     this.userService.getUsers().subscribe((data: any[]) => {
       this.users = data;
     });
+
+    this.dateObj = new Date()
   }
 
   onCategoryChange(category: string) {

@@ -113,12 +113,12 @@ export class NavService implements OnDestroy {
 			title: 'Dashboard', icon: 'grid', type: 'sub', Menusub: true, active: false, children: [
         { path: '/home/statistics', title: 'Program Status', type: 'link' },
 				{ path: '#', title: 'Pipeline', type: 'link' },
-				{ path: '', title: 'Inspection', type: 'link' },
-				{ path: 'Investigation', title: 'Integrity Management', type: 'link' },
-				{ path: 'State Waiver', title: 'Investigation', type: 'link' },
+				{ path: '#', title: 'Inspection', type: 'link' },
+				{ path: '#', title: 'Integrity Management', type: 'link' },
+				{ path: '#', title: 'Investigation', type: 'link' },
 				{ path: '/dashboard/state-waiver', title: 'State Waiver', type: 'link' },
-				{ path: 'State Waiver', title: 'Enforcement', type: 'link' },
-				{ path: 'State Waiver', title: 'Pipeline Safety Information', type: 'link' },
+				{ path: '#', title: 'Enforcement', type: 'link' },
+				{ path: '#', title: 'Pipeline Safety Information', type: 'link' },
 				]
 
 		},

@@ -123,3 +123,13 @@ input:not(.dark-mode)::placeholder{
   word-spacing:0px;
 
 }
+
+@media (max-width:991px) {
+  .header-title{
+    display: none !important;
+  }
+  .custom-logo{
+    width: 45px !important;
+    height: 50px !important;
+  }
+}

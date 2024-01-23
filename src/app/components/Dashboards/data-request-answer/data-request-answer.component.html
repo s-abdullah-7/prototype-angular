@@ -1,0 +1,48 @@
+<div class="d-flex responsive-margin m-5">
+  <ol class="breadcrumb1">
+    <li class="breadcrumb-item1"><a href="javascript:void(0)">Home</a></li>
+    <li class="breadcrumb-item1"><a href="javascript:void(0)">State Waiver</a></li>
+    <li class="breadcrumb-item1"><a href="javascript:void(0)">Data Request</a></li>
+  </ol>
+
+  <div class="ms-auto mt-2">
+    <a href="javascript:void(0)" class="text-primary" style="font-weight: bold; font-size: 15px;">
+      {{ dateObj | date:'fullDate' }}
+    </a>
+  </div>
+</div>
+
+<div class="row mt-5">
+  <div class="col-lg-12">
+          <div class="d-flex justify-content-end mt-3 mb-3" >
+
+            <button class="btn btn-primary" style="margin-right: 10px;"><i class="fa fa-save mx-2" aria-hidden="true"></i>Save</button>
+            <button class="btn btn-primary" style="margin-right: 10px;" ><i class="fa fa-undo mx-2" aria-hidden="true"></i>Reset</button>
+            <button class="btn btn-primary" routerLink="/stateWaiver/datarequest"><i class="fa fa-caret-left mx-2" aria-hidden="true" ></i>Back</button>
+        </div>
+    <div class="card">
+      <div class="card-header">
+        <h3 class="m-5">Answer Data Request</h3>
+      </div>
+      <div class="card-body">
+        <div class="mt-5 mb-5">
+          <h6 class="mb-5">ID: {{ questionId }}</h6>
+          <h6>Question: {{ question }}</h6>
+        </div>
+
+          <!-- Bootstrap Description -->
+          <div class="mb-7 mt-7">
+            <label for="answerDescription" class="form-label">Description</label>
+            <textarea class="form-control" id="answerDescription"  placeholder="Enter your answer description"></textarea>
+          </div>
+
+          <!-- Bootstrap Submit Button -->
+          <button class="btn btn-primary">Submit</button>
+          <button class="btn btn-primary mx-3" routerLink="/stateWaiver/datarequest">Cancel</button>
+
+
+          
+      </div>
+    </div>
+  </div>
+</div>

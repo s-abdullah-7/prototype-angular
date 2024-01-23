@@ -1,0 +1,54 @@
+<div class="d-flex responsive-margin" >
+
+<ol class="breadcrumb1">
+    <li class="breadcrumb-item1"><a href="javascript:void(0)">Home</a></li>
+    <li class="breadcrumb-item1"><a href="javascript:void(0)">State Waiver</a></li>
+    <li class="breadcrumb-item1"><a href="javascript:void(0)">Notification</a></li>
+</ol>
+
+<div class="ms-auto mt-2">
+        <a href="javascript:void(0)" class="text-primary" style="font-weight: bold; font-size: 15px;" >
+             {{ dateObj | date:'fullDate' }}
+        </a>
+</div>
+</div>
+
+
+
+<div class="row">
+<div class="col-lg-12">
+<div class="card">
+<div class="card-header">
+    <h3 class="m-3">State Waiver Notification</h3>
+</div>
+<div class="card-body">
+          <table class="table table-bordered ">
+            <thead class="thead-light">
+              <tr>
+                <th>Id</th>
+                <th>Received Application</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let datas of data">
+              <td>{{datas.id}}</td>
+              <td>{{datas.application}}</td>
+              <td>{{datas.status}}</td>
+                <td>
+                     <button class="btn btn-sm btn-primary-light mx-2" type="button" (click)="onViewClick(datas)">View</button>
+                </td>
+                </tr>                                                     
+            </tbody>
+          </table>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+</div>

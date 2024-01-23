@@ -1,0 +1,86 @@
+<div class="d-flex responsive-margin m-5">
+  <ol class="breadcrumb1">
+    <li class="breadcrumb-item1"><a href="javascript:void(0)">Home</a></li>
+    <li class="breadcrumb-item1"><a href="javascript:void(0)">State Waiver</a></li>
+    <li class="breadcrumb-item1"><a href="javascript:void(0)">Data Request</a></li>
+  </ol>
+
+  <div class="ms-auto mt-2">
+    <a href="javascript:void(0)" class="text-primary" style="font-weight: bold; font-size: 15px;">
+      {{ dateObj | date:'fullDate' }}
+    </a>
+  </div>
+</div>
+
+
+
+<div class="row">
+    <div class="col-lg-12">
+              <div class="d-flex justify-content-end mt-3 mb-3" >
+
+            <button class="btn btn-primary" style="margin-right: 10px;"><i class="fa fa-save mx-2" aria-hidden="true"></i>Save</button>
+            <button class="btn btn-primary" style="margin-right: 10px;" ><i class="fa fa-undo mx-2" aria-hidden="true"></i>Reset</button>
+            <button class="btn btn-primary" routerLink="/stateWaiver/datarequest"><i class="fa fa-caret-left mx-2" aria-hidden="true" ></i>Back</button>
+        </div>
+        <div class="card">
+            <div class="card-header">
+            <h4 class="m-3">Data Request Question</h4>
+            </div>
+
+            <div class="card-body">
+
+
+                <form>
+
+                                <div class="row">
+                 
+                 <div class="col-lg-4">
+                    <div class="form-group">
+                        <label for="companyDropdown">Assign Data Request Number:</label>
+                        <select class="form-control" id="companyDropdown">
+                            <option value="company1">Company 1</option>
+                            <option value="company2">Company 2</option>
+                            <!-- Add more options as needed -->
+                        </select>
+                        </div>                 
+                 
+                 </div>
+                 <div class="col-lg-4">
+                        <div class="form-group">
+                        <label for="inspectionUnitDropdown">Assign Index Number:</label>
+                        <select class="form-control" id="inspectionUnitDropdown">
+                            <option value="unit1">Unit 1</option>
+                            <option value="unit2">Unit 2</option>
+                            <!-- Add more options as needed -->
+                        </select>
+                        </div>                 
+                 
+                 </div>
+               
+                </div>
+                <div class="mb-3">
+                    <label for="question">Question:</label>
+                    <textarea class="form-control" id="question" rows="3"></textarea>
+                </div>
+
+                <!-- Add more form fields as needed -->
+
+                <button class="btn btn-primary" >Submit</button>
+                </form>
+            
+            
+
+            <div>
+            
+            
+            </div>
+            
+            </div>
+        
+        
+        </div>
+    
+    </div>
+
+
+</div>

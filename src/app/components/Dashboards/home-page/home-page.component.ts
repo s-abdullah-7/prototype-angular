@@ -1,6 +1,7 @@
 import { Component , OnInit , AfterViewInit ,ViewChild } from '@angular/core';
 import { NgbAccordion } from '@ng-bootstrap/ng-bootstrap';
 
+
 @Component({
   selector: 'app-home-page',
   templateUrl: './home-page.component.html',
@@ -38,7 +39,7 @@ export class HomePageComponent implements AfterViewInit {
   public isCollapsed20 = false;
   public isClosed20 = false;
 
-    public isCollapsed21 = false;
+  public isCollapsed21 = false;
   public isClosed21 = false;
 
   public isCollapsed1 = false;
@@ -166,7 +167,7 @@ export class HomePageComponent implements AfterViewInit {
   }
 
     Collapsetoggle21() {
-    this.isCollapsed21 = !this.isCollapsed2;
+    this.isCollapsed21 = !this.isCollapsed21;
   }
 
 
